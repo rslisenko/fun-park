@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Open+Sans:400,600,800&display=swap');
+
+body {
+	background-color: green;
+	font-family: $second_font;
+	font-size: 14px;
+	background: $blue;
+	color: $white;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $main_font;
+}
+h1 {
+
+}
+h2 {
+	font-size: 30px;
+	font-weight: 800;
+}
+h3 {
+	font-size: 20px;
+	font-weight: 800;
+}
+h4 {
+
+}
+h5 {
+
+}
+h6 {
+
+}
+p, a {
+	font-family: inherit;
+	color: inherit;
+}
+//
+.cover {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.contain {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+//
+.main-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+//
+.left-sidebar {
+	width: 200px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 30px 20px;
+	.logo-wrapper {
+		margin-bottom: 50px;
+	}
+	.working-info {
+		&__item {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		img {
+			margin-bottom: 5px;
+		}
+		.text {
+			width: 100%;
+		}
+	}
+	.socials {
+		width: 100px;
+		display: flex;
+		list-style-type: none;
+		li {
+			margin-right: 10px;
+			color: $white;
+			a {
+			}
+		}
+	}
+}
+//
+.content {
+	width: calc(100% - 200px);
+	padding-right: 100px;
+	//
+	.our-entertainments {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -20px;
+		margin-right: -20px;
+		&__item {
+			position: relative;
+			width: 33.33%;
+			padding-bottom: 33.33%;
+			&.long {
+				width: 66.66%;
+			}
+		}
+		.inner-wrapper {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: 20px;
+		}
+		.inner {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			flex-wrap: wrap;
+			border: 2px solid $white;
+			padding: 20px;
+			// background: $bg;
+		}
+	}
+}
