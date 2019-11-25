@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Open+Sans:400,600,800&display=swap");
+body {
+  background-color: green;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  background: #00456F;
+  color: #FFFFFF;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: -webkit-radial-gradient(73.12% 27.76%, 33.53% 68.95%, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F;
+  background: -o-radial-gradient(73.12% 27.76%, 33.53% 68.95%, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F;
+  background: radial-gradient(33.53% 68.95% at 73.12% 27.76%, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif; }
+
+h2 {
+  font-size: 30px;
+  font-weight: 800; }
+
+h3 {
+  font-size: 20px;
+  font-weight: 800; }
+
+p, a {
+  font-family: inherit;
+  color: inherit; }
+
+.cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.center {
+  text-align: center; }
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.sections-nav {
+  position: fixed;
+  list-style-type: none;
+  top: 20vh;
+  right: 20px; }
+  .sections-nav .active {
+    color: red; }
+
+.section {
+  padding-top: 25px;
+  margin-bottom: 50px;
+  min-height: 100vh; }
+  .section .fp-tableCell {
+    max-height: 100vh;
+    overflow-y: auto; }
+  .section .fp-scroller {
+    padding-right: 15px; }
+
+.left-sidebar {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 30px 20px; }
+  .left-sidebar__inner {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .left-sidebar .logo-wrapper {
+    margin-bottom: 50px; }
+  .left-sidebar .working-info__item {
+    text-align: center;
+    margin-bottom: 40px; }
+  .left-sidebar .working-info img {
+    margin-bottom: 5px; }
+  .left-sidebar .working-info .text {
+    width: 100%; }
+  .left-sidebar .socials {
+    width: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none; }
+    .left-sidebar .socials li {
+      margin-right: 10px;
+      color: #FFFFFF; }
+      .left-sidebar .socials li a {
+        display: block;
+        position: relative; }
+        .left-sidebar .socials li a:hover .hover {
+          opacity: 1;
+          z-index: 2; }
+      .left-sidebar .socials li img {
+        -webkit-transition: 0.1s;
+        -o-transition: 0.1s;
+        transition: 0.1s; }
+      .left-sidebar .socials li .hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0; }
+
+.content {
+  width: calc(100% - 200px);
+  padding-right: 100px; }
+  .content .our-entertainments {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-right: -20px; }
+    .content .our-entertainments__item {
+      position: relative;
+      width: 33.33%;
+      padding-bottom: 30%; }
+      .content .our-entertainments__item.long {
+        width: 66.66%; }
+    .content .our-entertainments .title {
+      text-shadow: -20px 20px 24px rgba(0, 0, 0, 0.25); }
+    .content .our-entertainments .inner-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 20px; }
+    .content .our-entertainments .inner {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      border: 2px solid #FFFFFF;
+      padding: 20px;
+      text-align: center; }
+      .content .our-entertainments .inner:hover .image-wrapper {
+        opacity: 1; }
+      .content .our-entertainments .inner .image-wrapper {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+  .content .info-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .content .info-section h2 {
+      margin-bottom: 25px; }
+    .content .info-section .left {
+      width: 45%; }
+    .content .info-section .tickets {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-bottom: 30px; }
+    .content .info-section .ticket {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-line-pack: justify;
+      align-content: space-between;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 164px;
+      height: 350px;
+      padding: 40px 20px 90px;
+      background-color: #FFFFFF;
+      color: #1B1C20; }
+      .content .info-section .ticket__header, .content .info-section .ticket__footer {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 6px; }
+      .content .info-section .ticket__header {
+        top: -6px; }
+      .content .info-section .ticket__footer {
+        bottom: -6px; }
+      .content .info-section .ticket__days, .content .info-section .ticket__price {
+        width: 100%;
+        text-align: center; }
+      .content .info-section .ticket__days {
+        font-size: 14px;
+        color: #00456F; }
+      .content .info-section .ticket__price {
+        font-size: 30px;
+        color: #E40005;
+        font-weight: 800; }
+      .content .info-section .ticket.ticket-2 {
+        margin-top: 50px;
+        margin-left: 30px; }
+    .content .info-section .right {
+      width: 55%; }
+      .content .info-section .right label {
+        font-size: 12px;
+        color: #FFFFFF; }
+      .content .info-section .right input[type="tel"],
+      .content .info-section .right input[type="text"],
+      .content .info-section .right input[type="email"] {
+        font-size: 20px;
+        background-color: transparent;
+        border: 1px solid #FFFFFF; }
+        .content .info-section .right input[type="tel"]:focus,
+        .content .info-section .right input[type="text"]:focus,
+        .content .info-section .right input[type="email"]:focus {
+          background-color: #00456F;
+          -webkit-box-shadow: none;
+          box-shadow: none; }
+      .content .info-section .right input[type="submit"] {
+        min-width: 210px;
+        padding: 11px 25px;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        background-color: transparent;
+        border-radius: 20px; }
+        .content .info-section .right input[type="submit"]:focus {
+          outline: none; }
+      .content .info-section .right input[type="checkbox"] {
+        display: none; }
+      .content .info-section .right .confirmation-wrapper {
+        position: relative;
+        padding-left: 40px;
+        font-size: 14px;
+        margin-bottom: 20px; }
+        .content .info-section .right .confirmation-wrapper input[type="checkbox"]:checked ~ .styled-checkbox:after {
+          opacity: 1; }
+        .content .info-section .right .confirmation-wrapper label {
+          font-size: 14px; }
+      .content .info-section .right .styled-checkbox {
+        position: absolute;
+        left: 1px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px; }
+        .content .info-section .right .styled-checkbox:before, .content .info-section .right .styled-checkbox:after {
+          content: "";
+          position: absolute; }
+        .content .info-section .right .styled-checkbox:before {
+          width: 26px;
+          height: 26px;
+          left: 0;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          border-radius: 50%;
+          border: 1px solid #FFFFFF; }
+        .content .info-section .right .styled-checkbox:after {
+          width: 20px;
+          height: 20px;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          background-color: #FFFFFF;
+          opacity: 0;
+          -webkit-transition: 0.2s;
+          -o-transition: 0.2s;
+          transition: 0.2s; }
+  .content .party-section {
+    overflow-x: hidden; }
+    .content .party-section .attractions {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-bottom: 100px; }
+      .content .party-section .attractions__item {
+        position: relative;
+        width: 33%;
+        padding: 15px; }
+        .content .party-section .attractions__item:nth-child(3n - 1) {
+          top: 100px; }
+      .content .party-section .attractions .inner {
+        position: relative;
+        padding-bottom: 200%; }
+      .content .party-section .attractions .content-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: 1px solid #FFFFFF; }
+      .content .party-section .attractions .content {
+        width: 100%; }

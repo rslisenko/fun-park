@@ -1,0 +1,42 @@
+// mixins
+$max-1900: "(max-width: 1900px)";
+$max-1680: "(max-width: 1680px)";
+$max-1440: "(max-width: 1440px)";
+$max-1366: "(max-width: 1366px)";
+$max-1280: "(max-width: 1280px)";
+$max-1279: "(max-width: 1279px)";
+$max-1200: "(max-width: 1200px)";
+$max-1199: "(max-width: 1199px)";
+$max-1024: "(max-width: 1024px)";
+$max-1023: "(max-width: 1023px)";
+$max-991: "(max-width: 991px)";
+$max-768: "(max-width: 768px)";
+$max-767: "(max-width: 767px)";
+$max-640: "(max-width: 640px)";
+$max-540: "(max-width: 540px)";
+$max-414: "(max-width: 414px)";
+$max-375: "(max-width: 375px)";
+$max-320: "(max-width: 320px)";
+
+$maxh-720: "(max-height: 720px)";
+
+$min-1681: "(min-width: 1681px)";
+$min-1367: "(min-width: 1367px)";
+$min-1281: "(min-width: 1281px)";
+$min-1200: "(min-width: 1200px)";
+$min-1025: "(min-width: 1025px)";
+$min-769: "(min-width: 769px)";
+$min-768: "(min-width: 768px)";
+$min-641: "(min-width: 641px)";
+$min-415: "(min-width: 415px)";
+
+
+$laptop: "(min-width: 1024px) and (max-width: 1680px)";
+$tablet: "(min-width: 415px) and (max-width: 1023px)";
+$mobile: "(max-width: 767px)";
+
+$res-1280-720: "#{$max-1280} and #{$maxh-720}";
+
+@mixin mq($screen) {
+	@media all and #{$screen} { @content; }
+}
