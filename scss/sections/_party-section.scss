@@ -1,115 +1,116 @@
 .party-section {
 	display: flex;
-}
 
-.party-block {
-	width: 70%;
-	margin-top: 30px;
-	padding-right: 30px;
-	margin-left: -15px;
-	margin-right: -15px;
-	&__header {
-		text-align: center;
-		p {
-			font-size: 20px;
-		}
-	}
-	&__list {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.list-item {
-		width: 50%;
-		padding: 15px;
-		.inner {
-			border-radius: 20px;
-			overflow: hidden;
-		}
-		.image {
-			padding-bottom: 100%;
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-		}
-		.description {
-			display: flex;
-			background-color: $white;
-			color: $black;
-			padding: 10px 15px;
-			img {
-				margin-right: 20px;
-			}
-			h3 {
-				margin-bottom: 0;
-			}
+	.party-block {
+		width: 70%;
+		margin-top: 30px;
+		padding-right: 30px;
+		margin-left: -15px;
+		margin-right: -15px;
+		&__header {
+			text-align: center;
 			p {
-				margin-bottom: 0;
-				line-height: 1;
+				font-size: 20px;
 			}
 		}
-	}
-}
-
-.events-block {
-	width: 30%;
-	background-color: $red;
-	padding: 30px 10px;
-	&__header {
-		text-align: center;
-		margin-bottom: 30px;
-		p {
-			font-size: 20px;
-		}
-	}
-	&__list {
-
-	}
-	.list-item {
-		border-radius: 20px;
-		overflow: hidden;
-		margin-bottom: 30px;
-		.top {
+		&__list {
 			display: flex;
 			flex-wrap: wrap;
+			padding-bottom: 50px;
 		}
-		.date {
-			width: 70px;
-			padding: 5px 10px;
-			color: $red;
-			border-top-left-radius: 20px;
-			border-top-right-radius: 20px;
-			background-color: $white;
+		.list-item {
+			width: 50%;
+			padding: 15px;
+			.inner {
+				border-radius: 20px;
+				overflow: hidden;
+			}
+			.image {
+				padding-bottom: 100%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.description {
+				display: flex;
+				background-color: $white;
+				color: $black;
+				padding: 10px 15px;
+				img {
+					margin-right: 20px;
+				}
+				h3 {
+					margin-bottom: 0;
+				}
+				p {
+					margin-bottom: 0;
+					line-height: 1;
+				}
+			}
+		}
+	}
+
+	.events-block {
+		width: 30%;
+		background-color: $brown;
+		padding: 30px 10px;
+		&__header {
 			text-align: center;
-			.month {
-				display: block;
-				font-size: 10px;
-			}
-			.day {
-				display: block;
-				font-size: 30px;
-				font-weight: 800;
-				line-height: 1;
-			}
-		}
-		.info {
-			width: calc(100% - 70px);
-			padding: 5px 15px;
-			color: $black;
-			border-top-left-radius: 20px;
-			border-top-right-radius: 20px;
-			background-color: $white;
-			span {
-				display: block;
+			margin-bottom: 30px;
+			p {
 				font-size: 20px;
-				font-weight: 500;
-				line-height: 1.1;
 			}
 		}
-		.image {
-			padding-bottom: 100%;
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
+		&__list {
+
+		}
+		.list-item {
+			border-radius: 20px;
+			overflow: hidden;
+			margin-bottom: 30px;
+			.top {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.date {
+				width: 70px;
+				padding: 5px 10px;
+				color: $red;
+				border-top-left-radius: 20px;
+				border-top-right-radius: 20px;
+				background-color: $white;
+				text-align: center;
+				.month {
+					display: block;
+					font-size: 10px;
+				}
+				.day {
+					display: block;
+					font-size: 30px;
+					font-weight: 800;
+					line-height: 1;
+				}
+			}
+			.info {
+				width: calc(100% - 70px);
+				padding: 5px 15px;
+				color: $black;
+				border-top-left-radius: 20px;
+				border-top-right-radius: 20px;
+				background-color: $white;
+				span {
+					display: block;
+					font-size: 20px;
+					font-weight: 500;
+					line-height: 1.1;
+				}
+			}
+			.image {
+				padding-bottom: 100%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
 		}
 	}
 }

@@ -1,0 +1,51 @@
+.food-services {
+	padding-top: 150px;
+	&__inner {
+		height: 100%;
+		max-height: 630px;
+		display: flex;
+		background-color: $brown;
+		color: $white;
+	}
+	.left {
+		width: 40%;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		padding: 50px 50px;
+		h2 {
+			line-height: 1.2;
+			margin-bottom: 25px;
+		}
+	}
+	.right {
+		width: 60%;
+	}
+	.services-list {
+		display: flex;
+		height: calc(100% + 20px);
+		&__item {
+			position: relative;
+			width: 33.3%;
+			padding: 30px 15px;
+			text-align: center;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			&:nth-child(1) {
+				top: -20px;
+			}
+			&:nth-child(2) {
+				top: 30px;
+			}
+			&:nth-child(3) {
+				top: -50px;
+			}
+		}
+		h3 {
+			text-transform: uppercase;
+		}
+	}
+}

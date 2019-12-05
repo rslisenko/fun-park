@@ -1,0 +1,36 @@
+.cinema-section {
+	padding-top: 0;
+	&__inner {
+		position: relative;
+		min-height: 90vh;
+		padding-bottom: 130px;
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 200px;
+		margin-left: -50px;
+		margin-right: -50px;
+		margin-bottom: 40px;
+	}
+	&__body {
+		padding-bottom: 40px;
+	}
+	.audience-bg {
+		display: flex;
+		align-items: flex-end;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-position: center bottom;
+		p {
+			max-width: 560px;
+			font-size: 20px;
+			line-height: 1.2;
+			font-weight: 500;
+		}
+	}
+}
