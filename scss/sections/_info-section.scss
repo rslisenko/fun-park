@@ -50,6 +50,7 @@
 			margin-top: 60px;
 		}
 		&__price {
+			font-family: $main_font;
 			font-size: 30px;
 			color: $red;
 			font-weight: 800;
@@ -61,8 +62,8 @@
 	}
 	.right {
 		width: 55%;
-		form {
-
+		.contact-form {
+			max-width: 450px;
 		}
 		label {
 			font-size: 12px;
@@ -82,16 +83,20 @@
 		input[type="submit"] {
 			min-width: 210px;
 			padding: 11px 25px;
+			font-family: $main_font;
 			font-size: 14px;
 			font-weight: 800;
 			letter-spacing: 0.2em;
 			text-transform: uppercase;
 			color: $white;
-			border: 1px solid $white;
+			border: 2px solid $white;
 			background-color: transparent;
 			border-radius: 20px;
 			&:focus {
 				outline: none;
+			}
+			&:hover {
+				cursor: pointer;
 			}
 		}
 		input[type="checkbox"] {

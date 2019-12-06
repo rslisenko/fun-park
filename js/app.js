@@ -16,7 +16,7 @@ $(document).ready(function () {
 	// });
 
 
-	// scroll on ancor click
+	// SCROLL ON ANCOR CLICK
 	$('a[href*="#"]').on('click', function(event) {
 		event.preventDefault();
 		let section_name = $(this).attr('href');
@@ -29,7 +29,30 @@ $(document).ready(function () {
 		}, 800)
 	});
 
-	// mark active nav item
+
+	// SCROLL TOP ON CLICK
+	$('.scroll-top').on('click', function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 500);
+	});
+
+
+	// FORM CHECKBOX CLICK
+	$('.confirmation-wrapper input[type="checkbox"]').on('click', function () {
+		if ($(this).is(':checked')) {
+			$('.contact-form').find('input[type="submit"]').removeClass('inactive');
+		} else {
+			$('.contact-form').find('input[type="submit"]').addClass('inactive');
+		}
+	});
+
+	$('.inactive').on('click', function (event) {
+		return false;
+	});
+
+
+	// MARK ACTIVE NAV ITEM ON CLICK
 	$('.sections-nav li').on('click', function(){
 		$this = $(this);
 		if ($this.hasClass('first')) {
@@ -43,7 +66,8 @@ $(document).ready(function () {
 		}, 800);
 	});
 
-	// check all sections border
+
+	// CALCULATE SECTIONS START-END POINTS
 	let sections = [];
 	let section_start = 0;
 	let section_end = 0;
@@ -55,10 +79,14 @@ $(document).ready(function () {
 		sections.push(section);
 	});
 
-	// on scroll
+
+	// ON SCROLL
 	let vh = $(window).height();
 	let offset_top = 0;
 	let current_section = '';
+	let last_index = sections.length - 1;
+	$scroll_top_btn = $('.scroll-top');
+	$hint = $('.hint');
 
 	$(document).on('scroll', function(event) {
 		offset_top = $(this).scrollTop();
@@ -66,9 +94,15 @@ $(document).ready(function () {
 		sections.forEach(function(item, i , arr) {
 			if (in_range(offset_top + vh, item.start, item.end)) {
 				current_section = '".section-' + i + '"';
-				// console.log(current_section);
 				$('.sections-nav li').removeClass('active');
 				$(".sections-nav").find('[data-menuanchor="section-'+i+'"]').addClass('active');
+				if (i == last_index) {
+					$scroll_top_btn.removeClass('hide-block');
+					$hint.addClass('hide-block');
+				} else {
+					$scroll_top_btn.addClass('hide-block');
+					$hint.removeClass('hide-block');
+				}
 			}
 		});
 	});

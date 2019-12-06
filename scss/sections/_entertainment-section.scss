@@ -10,9 +10,8 @@
 	&__item {
 		position: relative;
 		width: 33.33%;
-		padding-bottom: 28%;
+		padding-bottom: 33.33%;
 		@include mq($max-1440) {
-			padding-bottom: 33%;
 		}
 		&.long {
 			width: 66.66%;

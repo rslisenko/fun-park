@@ -13,6 +13,7 @@
 
     <div class="main-content">
 
+        <!-- BEGIN LEFT SIDEBAR -->
         <div class="left-sidebar">
             <div class="left-sidebar__inner">
                 <div class="logo-wrapper">
@@ -54,7 +55,9 @@
                 </ul>
             </div>
         </div>
+        <!-- END LEFT SIDEBAR -->
 
+        <!-- BEGIN CONTENT -->
         <div class="content">
             <div class="nav-wrapper">
                 <ul id="sections-nav" class="sections-nav">
@@ -66,7 +69,8 @@
                     <li data-menuanchor="section-5" class=""><a href="#section-5">Watch Sport</a></li>
                     <li data-menuanchor="section-6" class=""><a href="#section-6">Contacts</a></li>
                 </ul>
-                <span class="hint">Прокрути вниз</span>
+                <span class="hint">прокрути вниз</span>
+                <div class="scroll-top hide-block"></div>
             </div>
 
             <div id="fullpage" class="sections">
@@ -167,8 +171,8 @@
                                 </span>
                             </div>
                             <div class="form-row">
-                                <div class="btn-wrapper">
-                                    <input type="submit" name="submit" value="Відправити">
+                                <div class="btn-wrapper text-center">
+                                    <input class="inactive" type="submit" name="submit" value="Відправити">
                                 </div>
                             </div>
                         </form>
@@ -179,155 +183,177 @@
 
                 <!-- BEGIN PLAY SECTION -->
                 <section  id="section-2" class="play-section section-2 section" data-anchor="section-2">
-                    <h2 class="center">PLAY SECTION</h2>
-                    <p class="center">Атракціони в FUN PARK</p>
+                    <div class="play-section__header header-block">
+                        <h2 class="center">PLAY SECTION</h2>
+                        <p class="center">Атракціони в FUN PARK</p>
+                    </div>
                     <div class="attractions">
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-1.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-1.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Бик родео</h3>
+                                        <p>Сідлай бика та спробуй втриматись. Дикий захід Кривий Ріг вже чекає на тебе!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-2.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-2.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Тир</h3>
+                                        <p>Перевір, чи тверда в тебе рука, снайпере! Лови мішень в приціл та жми курок!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-3.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-3.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Ігрові автомати</h3>
+                                        <p>Аркади, шутери, драйв або спорт? Обирай гру собі до смаку та поринай у світ пригод!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-4.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-4.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Боулінг</h3>
+                                        <p>22 доріжки вистачить на всіх. Що цього разу виб'єш ти — спліт, спейр або страйк?</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-1.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-5.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">більярд</h3>
+                                        <p>16 більярдних столів вже чекають на прихильників піраміди та пулу.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-2.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-6.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">5D-cinema</h3>
+                                        <p>Більше ніж звичайне кіно. Поринь у глибини інших реальностей та світів...</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-3.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-7.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Q-ZAR</h3>
+                                        <p>Збирай друзів на шалений батл. Фантастична арена та лазерні баталії чекають!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-4.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-8.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Настільний теніс</h3>
+                                        <p>Визнана класика жанру розваг. Завжди актуальний, його Величність пінг-понг!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-1.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-9.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Дитяча зона</h3>
+                                        <p>Розваги для наймолодших. Залишай малечу з нянею та відривайся на повну!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-3.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-10.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Автодром</h3>
+                                        <p>Перегони наввипередки з друзями та дрифтові батли — вже тут, мерщій за кермо!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-4.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-11á.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Роллердром</h3>
+                                        <p>Гладенький паркет для спокійного катання та шалених трюків чекають саме на тебе!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-1.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-12.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Кібер зона</h3>
+                                        <p>Шановні геймери та гості міста, не змушуйте джойстики та зручні крісла нудьгувати без Вас!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-3.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-15.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">VR</h3>
+                                        <p>Надягай шолом та поринай в неймовірний світ віртуальної реальності. </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-4.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-14.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Game club</h3>
+                                        <p>Ультра-графіка в Battlefield V чи Forza Horizon 4? Наше залізо тягне все і навіть більше!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="attractions__item">
                             <div class="inner">
-                                <div class="content-wrapper cover" style="background-image: url('images/play/card-1.png');">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-13.jpg');">
                                     <div class="content">
-                                        <h3 class="title">Title</h3>
-                                        <p>всегда весело, независимо от того, катаетесь вы вместе с друзьями или один</p>
+                                        <h3 class="title">Самокати, гіроскутери</h3>
+                                        <p>На тих, хто не звик ходити пішки, чекає транспорт для пересування між розвагами. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="attractions__item">
+                            <div class="inner">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-16.jpg');">
+                                    <div class="content">
+                                        <h3 class="title">Настільні ігри</h3>
+                                        <p>Настільний футбол, аерохокей чи щось незвичне? Щодня нові турніри з друзями!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="attractions__item">
+                            <div class="inner">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-17.jpg');">
+                                    <div class="content">
+                                        <h3 class="title">Дартс</h3>
+                                        <p>Лише ти, дротики та мішень. Поціль у яблучко, якщо зможеш.</p>
                                     </div>
                                 </div>
                             </div>
@@ -339,7 +365,7 @@
                 <!-- BEGIN PARTY SECTION -->
                 <section  id="section-3" class="party-section section-3 section" data-anchor="section-3">
                     <div class="party-block">
-                        <div class="party-block__header">
+                        <div class="party-block__header header-block">
                             <h2 class="title">Party</h2>
                             <p class="subtitle">Враження в FUN PARK</p>
                         </div>
@@ -425,13 +451,13 @@
                         </div>
                     </div>
                     <div class="events-block">
-                        <div class="events-block__header">
+                        <div class="events-block__header header-block">
                             <h2 class="title">Events</h2>
                             <p class="subtitle">Незабаром в FUN PARK</p>
                         </div>
                         <div class="events-block__list">
                             <div class="list-item">
-                                <div class="top">
+                                <div class="list-item__header">
                                     <div class="date">
                                         <span class="month">Листопад</span>
                                         <span class="day">25</span>
@@ -441,10 +467,25 @@
                                         <span>FUN PARK</span>
                                     </div>
                                 </div>
-                                <div class="image" style="background-image: url(images/party/event-1.jpg);"></div>
+                                <div class="list-item__body">
+                                    <div class="image" style="background-image: url(images/party/event-1.jpg);"></div>
+                                    <div class="inner-content">
+                                        <div class="time-wrapper">
+                                            <span class="text">Початок:</span>
+                                            <span class="time">12:00</span>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <span class="text">Вхід: </span>
+                                            <span class="price">по тарифу</span>
+                                        </div>
+                                        <div class="btn-wrapper">
+                                            <a href="#" class="btn btn--fb">докладніше</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="list-item">
-                                <div class="top">
+                                <div class="list-item__header">
                                     <div class="date">
                                         <span class="month">Листопад</span>
                                         <span class="day">25</span>
@@ -454,10 +495,25 @@
                                         <span>FUN PARK</span>
                                     </div>
                                 </div>
-                                <div class="image" style="background-image: url(images/party/event-2.jpg);"></div>
+                                <div class="list-item__body">
+                                    <div class="image" style="background-image: url(images/party/event-2.jpg);"></div>
+                                    <div class="inner-content">
+                                        <div class="time-wrapper">
+                                            <span class="text">Початок:</span>
+                                            <span class="time">12:00</span>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <span class="text">Вхід: </span>
+                                            <span class="price">по тарифу</span>
+                                        </div>
+                                        <div class="btn-wrapper">
+                                            <a href="#" class="btn btn--fb">докладніше</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="list-item">
-                                <div class="top">
+                                <div class="list-item__header">
                                     <div class="date">
                                         <span class="month">Листопад</span>
                                         <span class="day">25</span>
@@ -467,7 +523,22 @@
                                         <span>FUN PARK</span>
                                     </div>
                                 </div>
-                                <div class="image" style="background-image: url(images/party/event-1.jpg);"></div>
+                                <div class="list-item__body">
+                                    <div class="image" style="background-image: url(images/party/event-1.jpg);"></div>
+                                    <div class="inner-content">
+                                        <div class="time-wrapper">
+                                            <span class="text">Початок:</span>
+                                            <span class="time">12:00</span>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <span class="text">Вхід: </span>
+                                            <span class="price">по тарифу</span>
+                                        </div>
+                                        <div class="btn-wrapper">
+                                            <a href="#" class="btn btn--fb">докладніше</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -509,6 +580,7 @@
                             <h2>100 екранів для трансляції всіх спортивних подій у Світі</h2>
                         </div>
                         <div class="cinema-section__body">
+                            <img class="bg-image" src="images/cinema/screen-image-1.jpg" alt="title">
                             <img src="images/cinema/screen.png" alt="title">
                         </div>
                         <div class="audience-bg contain" style="background-image: url('./images/cinema/audience.png');">
@@ -530,6 +602,7 @@
             </div>
 
         </div>
+        <!-- END CONTENT -->
 
     </div>
 
