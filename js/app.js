@@ -54,9 +54,8 @@ $(document).ready(function () {
 		section.end = section.start + $(el).outerHeight();
 		sections.push(section);
 	});
-	// console.log('sections: ', sections);
 
-
+	// on scroll
 	let vh = $(window).height();
 	let offset_top = 0;
 	let current_section = '';
@@ -65,12 +64,9 @@ $(document).ready(function () {
 		offset_top = $(this).scrollTop();
 
 		sections.forEach(function(item, i , arr) {
-			// console.log('item: ', item);
-			// console.log('i: ', i);
 			if (in_range(offset_top + vh, item.start, item.end)) {
-				// console.log('section: ', i);
-				current_section = '".section-'+i+'"';
-				console.log(current_section);
+				current_section = '".section-' + i + '"';
+				// console.log(current_section);
 				$('.sections-nav li').removeClass('active');
 				$(".sections-nav").find('[data-menuanchor="section-'+i+'"]').addClass('active');
 			}

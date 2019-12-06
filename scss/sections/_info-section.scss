@@ -3,10 +3,12 @@
 	flex-wrap: wrap;
 	h2 {
 		margin-bottom: 25px;
-		max-width: 450px;
 	}
 	.left {
 		width: 45%;
+		h2 {
+			max-width: 450px;
+		}
 	}
 	.tickets {
 		display: flex;
