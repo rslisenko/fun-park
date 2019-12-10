@@ -22,15 +22,16 @@
                 <div class="working-info">
                     <div class="working-info__item">
                         <img class="icon" src="images/location.svg">
-                        <a href="#section-6">г. Кривой Рог вул. Єсеніна, 16</a>
+                        <a href="#section-6">м. Кривий Ріг, вул. Єсеніна, 16</a>
                     </div>
                     <div class="working-info__item">
                         <img class="icon" src="images/smartphone.svg">
-                        <a href="tel:+88003335555">8 800 333 5555</a>
+                        <a href="tel:+0997027014">099 702 7014</a>
                     </div>
                     <div class="working-info__item">
                         <img class="icon" src="images/clock.svg">
-                        <p>10:00 - 18:00</p>
+                        <p><span>Пн - Пт:</span> 12:00 - 06:00</p>
+                        <p><span>Сб - Нд:</span> 10:00 - 06:00</p>
                     </div>
                 </div>
                 <ul class="socials">
@@ -109,7 +110,13 @@
             <!-- BEGIN  INFO SECTION -->
             <section  id="section-1" class="info-section section section-1" data-anchor="section-1">
                 <div class="info-section__inner">
-                    <div class="for-send-successfuly-popup popup hide-block">
+                    <div class="send-successfuly-popup popup hide-block">
+                        <div class="close"></div>
+                        <h2>Дякуємо!</h2>
+                        <p>Ваші дані успішно відправлені. Купон на знижку буде надіслано на вкузану пошту.</p>
+                        <div class="btn-wrapper">
+                            <div class="btn btn--red btn-ok">OK</div>
+                        </div>
                     </div>
                     <div class="left">
                         <h2>Один квиток на всі розваги</h2>
@@ -285,7 +292,7 @@
                     </div>
                     <div class="attractions__item">
                         <div class="inner">
-                            <div class="content-wrapper cover" style="background-image: url('images/play/funpark-11á.jpg');">
+                            <div class="content-wrapper cover" style="background-image: url('images/play/funpark-11.jpg');">
                                 <div class="content">
                                     <h3 class="title">Роллердром</h3>
                                     <p>Гладенький паркет для спокійного катання та шалених трюків чекають саме на тебе!</p>
@@ -452,85 +459,91 @@
                     </div>
                     <div class="events-block__list">
                         <div class="list-item">
-                            <div class="list-item__header">
-                                <div class="date">
-                                    <span class="month">Листопад</span>
-                                    <span class="day">25</span>
-                                </div>
-                                <div class="info">
-                                    <span class="">Відкриття</span>
-                                    <span>FUN PARK</span>
-                                </div>
-                            </div>
-                            <div class="list-item__body">
-                                <div class="image" style="background-image: url(images/party/event-1.jpg);"></div>
-                                <div class="inner-content">
-                                    <div class="time-wrapper">
-                                        <span class="text">Початок:</span>
-                                        <span class="time">12:00</span>
+                            <div class="list-item__inner">
+                                <div class="list-item__header">
+                                    <div class="date">
+                                        <span class="month">Листопад</span>
+                                        <span class="day">25</span>
                                     </div>
-                                    <div class="price-wrapper">
-                                        <span class="text">Вхід: </span>
-                                        <span class="price">по тарифу</span>
-                                    </div>
-                                    <div class="btn-wrapper">
-                                        <a href="#" class="btn btn--fb">докладніше</a>
+                                    <div class="info">
+                                        <span class="">Відкриття</span>
+                                        <span>FUN PARK</span>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="list-item">
-                            <div class="list-item__header">
-                                <div class="date">
-                                    <span class="month">Листопад</span>
-                                    <span class="day">25</span>
-                                </div>
-                                <div class="info">
-                                    <span class="">Відкриття</span>
-                                    <span>FUN PARK</span>
-                                </div>
-                            </div>
-                            <div class="list-item__body">
-                                <div class="image" style="background-image: url(images/party/event-2.jpg);"></div>
-                                <div class="inner-content">
-                                    <div class="time-wrapper">
-                                        <span class="text">Початок:</span>
-                                        <span class="time">12:00</span>
-                                    </div>
-                                    <div class="price-wrapper">
-                                        <span class="text">Вхід: </span>
-                                        <span class="price">по тарифу</span>
-                                    </div>
-                                    <div class="btn-wrapper">
-                                        <a href="#" class="btn btn--fb">докладніше</a>
+                                <div class="list-item__body">
+                                    <div class="image" style="background-image: url(images/party/event-1.jpg);"></div>
+                                    <div class="inner-content">
+                                        <div class="time-wrapper">
+                                            <span class="text">Початок:</span>
+                                            <span class="time">12:00</span>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <span class="text">Вхід: </span>
+                                            <span class="price">по тарифу</span>
+                                        </div>
+                                        <div class="btn-wrapper">
+                                            <a href="#" class="btn btn--fb">докладніше</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="list-item">
-                            <div class="list-item__header">
-                                <div class="date">
-                                    <span class="month">Листопад</span>
-                                    <span class="day">25</span>
+                            <div class="list-item__inner">
+                                <div class="list-item__header">
+                                    <div class="date">
+                                        <span class="month">Листопад</span>
+                                        <span class="day">25</span>
+                                    </div>
+                                    <div class="info">
+                                        <span class="">Відкриття</span>
+                                        <span>FUN PARK</span>
+                                    </div>
                                 </div>
-                                <div class="info">
-                                    <span class="">Відкриття</span>
-                                    <span>FUN PARK</span>
+                                <div class="list-item__body">
+                                    <div class="image" style="background-image: url(images/party/event-2.jpg);"></div>
+                                    <div class="inner-content">
+                                        <div class="time-wrapper">
+                                            <span class="text">Початок:</span>
+                                            <span class="time">12:00</span>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <span class="text">Вхід: </span>
+                                            <span class="price">по тарифу</span>
+                                        </div>
+                                        <div class="btn-wrapper">
+                                            <a href="#" class="btn btn--fb">докладніше</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="list-item__body">
-                                <div class="image" style="background-image: url(images/party/event-1.jpg);"></div>
-                                <div class="inner-content">
-                                    <div class="time-wrapper">
-                                        <span class="text">Початок:</span>
-                                        <span class="time">12:00</span>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item__inner">
+                                <div class="list-item__header">
+                                    <div class="date">
+                                        <span class="month">Листопад</span>
+                                        <span class="day">25</span>
                                     </div>
-                                    <div class="price-wrapper">
-                                        <span class="text">Вхід: </span>
-                                        <span class="price">по тарифу</span>
+                                    <div class="info">
+                                        <span class="">Відкриття</span>
+                                        <span>FUN PARK</span>
                                     </div>
-                                    <div class="btn-wrapper">
-                                        <a href="#" class="btn btn--fb">докладніше</a>
+                                </div>
+                                <div class="list-item__body">
+                                    <div class="image" style="background-image: url(images/party/event-1.jpg);"></div>
+                                    <div class="inner-content">
+                                        <div class="time-wrapper">
+                                            <span class="text">Початок:</span>
+                                            <span class="time">12:00</span>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <span class="text">Вхід: </span>
+                                            <span class="price">по тарифу</span>
+                                        </div>
+                                        <div class="btn-wrapper">
+                                            <a href="#" class="btn btn--fb">докладніше</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -545,7 +558,7 @@
                 <div class="food-services__inner">
                     <div class="left">
                         <h2>Один фуд-корт - їжа на будь-який смак</h2>
-                        <p>В Fun Park никто не останеться голодным. Мы позаботились о том, чтобы Вы могли отдыхать и веселиться, не переживая о том, где бы поесть. На нашем фуд-корте для Вас работают лучшие шеф-повара города различных кухонь мира.</p>
+                        <p>В Fun Park никто не останеться голодным. <br/>Мы позаботились о том, чтобы Вы могли отдыхать и веселиться, не переживая о том, где бы поесть. На нашем фуд-корте для Вас работают лучшие шеф-повара города различных кухонь мира.</p>
                     </div>
                     <div class="right">
                         <div class="services-list">
@@ -575,11 +588,13 @@
                         <h2>100 екранів для трансляції всіх спортивних подій у Світі</h2>
                     </div>
                     <div class="cinema-section__body">
-                        <img class="bg-image" src="images/cinema/screen-image-1.jpg" alt="title">
-                        <img src="images/cinema/screen.png" alt="title">
-                    </div>
-                    <div class="audience-bg contain" style="background-image: url('./images/cinema/audience.png');">
-                        <p>Найбільший екран для найяскравіших вражень. Тільки у Fun Park, всі спортивні події на екрані діагоналлю 625 дюймів! </p>
+                        <div class="screen-wrapper">
+                            <img class="bg-image" src="images/cinema/screen-image-1.jpg" alt="title">
+                            <img src="images/cinema/screen.png" alt="title">
+                        </div>
+                        <div class="audience-bg contain" style="background-image: url('./images/cinema/audience.png');">
+                            <p>Найбільший екран для найяскравіших вражень. Тільки у Fun Park, всі спортивні події на екрані діагоналлю 625 дюймів! </p>
+                        </div>
                     </div>
                 </div>
             </section>

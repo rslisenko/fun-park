@@ -43,6 +43,12 @@
 			max-width: 75%;
 			margin-left: 20%;
 			padding: 40px 10px;
+			@include mq($max-1279) {
+				max-width: 90%;
+				right: -10px;
+				margin-left: 10%;
+				padding: 20px 10px;
+			}
 			.title {
 				font-size: 30px;
 				text-transform: uppercase;

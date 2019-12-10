@@ -72,15 +72,14 @@ $(document).ready(function () {
 
 	// FORM ACTIONS
 	let localStorage = window.localStorage;
-	let is_form_send_successfuly = false;
-	let $form_status_popup = $('.for-send-successfuly-popup');
+	let $form_status_popup = $('.send-successfuly-popup');
 
 	$('form').on('submit', function () {
-		is_form_send_successfuly = true;
-		localStorage.setItem('form_send_status', is_form_send_successfuly);
+		localStorage.setItem('form_send_status', 'ok');
 	});
 
-	if (localStorage.getItem('form_send_status') == 'true') {
+	if (localStorage.getItem('form_send_status') == 'ok') {
+		console.log('form send status: ', localStorage.getItem('form_send_status'));
 		localStorage.clear();
 		$('html, body').animate({
 			scrollTop: sections[1].start
@@ -92,7 +91,7 @@ $(document).ready(function () {
 
 	//
 	$('.popup .btn-ok, .popup .close').on('click', function(event) {
-		$('.for-send-successfuly-popup').addClass('hide-block');
+		$('.send-successfuly-popup').addClass('hide-block');
 	});
 
 	// MARK ACTIVE NAV ITEM ON CLICK

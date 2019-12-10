@@ -10,6 +10,9 @@
 	}
 	.left {
 		width: 48%;
+		@include mq($max-1279) {
+			width: 100%;
+		}
 		h2 {
 			max-width: 450px;
 		}
@@ -72,8 +75,14 @@
 	}
 	.right {
 		width: 52%;
-		.contact-form {
-			max-width: 450px;
+		@include mq($max-1279) {
+			width: 100%;
+			padding-top: 50px;
+		}
+		h2 {
+			@include mq($max-1279) {
+				max-width: 600px;
+			}
 		}
 		label {
 			font-size: 12px;
@@ -97,6 +106,14 @@
 		}
 		input[type="checkbox"] {
 			display: none;
+		}
+		.contact-form {
+			max-width: 450px;
+		}
+		.btn-wrapper {
+			@include mq($max-1279) {
+				text-align: left;
+			}
 		}
 		.confirmation-wrapper {
 			position: relative;

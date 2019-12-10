@@ -63,7 +63,7 @@ span {
 }
 .btn {
 	min-width: 210px;
-	padding: 11px 25px;
+	padding: 8px 25px;
 	font-family: $main_font;
 	font-size: 14px;
 	font-weight: 800;
@@ -106,7 +106,8 @@ span {
 .section {
 	padding-top: 50px;
 	padding-bottom: 50px;
-	min-height: calc(100vh + 20px);
+	// min-height: calc(100vh + 20px);
+	min-height: 100vh;
 	.fp-tableCell {
 		max-height: 100vh;
 		overflow-y: auto;
@@ -152,6 +153,9 @@ span {
 		width: 20px;
 		height: 20px;
 		background-image: url('../images/close.svg');
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
 		&:hover {
 			cursor: pointer;
 		}
@@ -169,32 +173,33 @@ span {
 		margin-top: 25px;
 	}
 }
-.for-send-successfuly-popup {
+.send-successfuly-popup {
 	width: 330px;
 	height: 330px;
-}
+	text-align: center;
+	padding: 30px 40px;
+	h2 {
+		margin-bottom: 10px;
+		font-weight: 800;
+		color: $blue;
+	}
+	p {
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.btn-wrapper {
+		margin-top: 30px;
+		.btn {
 
-// .fp-scroller {
-// 	padding-right: 15px;
-// 	// width: 100%;
-// 	min-height: 100%;
-// 	& > div {
-// 		width: 100%;
-// 	}
-// }
-// .fp-scrollable {
-// 	width: 100%;
-// 	.fp-scroller {
-// 		display: flex;
-// 		flex-wrap: wrap;
-// 		width: 100%;
-// 	}
-// }
+		}
+	}
+}
 
 //
 .main-content {
 	display: flex;
 	flex-wrap: wrap;
+	overflow-x: hidden;
 }
 //
 .left-sidebar {
@@ -237,6 +242,15 @@ span {
 			margin-left: auto;
 			margin-right: auto;
 			color: inherit;
+		}
+		p {
+			max-width: 140px;
+			font-size: 12px;
+			font-family: $main_font;
+			margin-bottom: 5px;
+			span {
+				font-weight: 800;
+			}
 		}
 		img {
 			margin-bottom: 10px;
@@ -297,6 +311,7 @@ span {
 //
 .nav-wrapper {
 	position: fixed;
+	z-index: 10;
 	max-width: 15vw;
 	width: 100%;
 	height: 100vh;

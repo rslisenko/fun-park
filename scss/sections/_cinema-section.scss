@@ -1,12 +1,10 @@
 .cinema-section {
-	padding-top: 0;
 	display: flex;
 	align-items: center;
 	&__inner {
 		position: relative;
 		width: 100%;
 		min-height: 90vh;
-		padding-bottom: 200px;
 		img {
 			width: 100%;
 			height: auto;
@@ -20,10 +18,24 @@
 		margin-left: -50px;
 		margin-right: -50px;
 		margin-bottom: 60px;
+		@include mq($max-1279) {
+			padding-left: 50px;
+			padding-right: 50px;
+			text-align: center;
+		}
 	}
 	&__body {
 		position: relative;
-		// padding-bottom: 40px;
+		padding-bottom: 200px;
+		&:hover {
+			.bg-image {
+				opacity: 1;
+			}
+		}
+		.screen-wrapper {
+			position: relative;
+			overflow: hidden;
+		}
 		.bg-image {
 			position: absolute;
 			z-index: -1;
@@ -34,6 +46,8 @@
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
+			opacity: 0;
+			transition: 0.3s;
 		}
 	}
 	.audience-bg {
@@ -41,12 +55,17 @@
 		align-items: flex-end;
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: -50px;
 		bottom: 0;
-		right: 0;
+		right: -50px;
 		background-position: center bottom;
 		background-size: auto;
 		background-repeat: no-repeat;
+		padding-left: 50px;
+		padding-right: 50px;
+		@include mq($max-1279) {
+			background-size: 120%;
+		}
 		p {
 			max-width: 560px;
 			font-size: 20px;
