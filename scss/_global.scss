@@ -106,6 +106,8 @@ span {
 .section {
 	padding-top: 50px;
 	padding-bottom: 50px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 	// min-height: calc(100vh + 20px);
 	min-height: 100vh;
 	.fp-tableCell {
@@ -120,7 +122,6 @@ span {
 	margin-left: auto;
 	margin-right: auto;
 }
-
 
 .inactive {
 	opacity: 0.5;
@@ -178,6 +179,7 @@ span {
 	height: 330px;
 	text-align: center;
 	padding: 30px 40px;
+	background-color: rgba($white, 0.7);
 	h2 {
 		margin-bottom: 10px;
 		font-weight: 800;
@@ -195,7 +197,8 @@ span {
 	}
 }
 
-//
+
+// BEGIN MAIN CONTENT
 .main-content {
 	display: flex;
 	flex-wrap: wrap;
