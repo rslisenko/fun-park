@@ -57,9 +57,45 @@
         </div>
         <!-- END LEFT SIDEBAR -->
 
-        <!-- BEGIN CONTENT -->
-        <div class="content">
-            <div class="nav-wrapper">
+        <!-- BEGIN NAV -->
+        <div class="nav-wrapper">
+            <ul id="sections-nav" class="sections-nav">
+                <li data-menuanchor="section-0" class="first active"><a href="#section-0">Main</a></li>
+                <li data-menuanchor="section-1" class=""><a href="#section-1">Tickets</a></li>
+                <li data-menuanchor="section-2" class=""><a href="#section-2">Play</a></li>
+                <li data-menuanchor="section-3" class=""><a href="#section-3">Party</a></li>
+                <li data-menuanchor="section-4" class=""><a href="#section-4">Eat & Drink</a></li>
+                <li data-menuanchor="section-5" class=""><a href="#section-5">Watch Sport</a></li>
+                <li data-menuanchor="section-6" class=""><a href="#section-6">Contacts</a></li>
+            </ul>
+            <div class="hint-wrapper">
+                <span class="hint">прокрути вниз</span>
+            </div>
+            <div class="scroll-top hide-block"></div>
+        </div>
+        <!-- END NAV -->
+
+        <!-- BEGIN MOBILE NAV -->
+        <div class="nav-wrapper mobile">
+
+            <div class="open"></div>
+            <div class="close"></div>
+
+            <div class="inner">
+                <div class="working-info">
+                    <div class="working-info__item">
+                        <img class="icon" src="images/location.svg">
+                        <a href="#section-6">г. Кривой Рог вул. Єсеніна, 16</a>
+                    </div>
+                    <div class="working-info__item">
+                        <img class="icon" src="images/smartphone.svg">
+                        <a href="tel:+88003335555">8 800 333 5555</a>
+                    </div>
+                    <div class="working-info__item">
+                        <img class="icon" src="images/clock.svg">
+                        <p>10:00 - 18:00</p>
+                    </div>
+                </div>
                 <ul id="sections-nav" class="sections-nav">
                     <li data-menuanchor="section-0" class="first active"><a href="#section-0">Main</a></li>
                     <li data-menuanchor="section-1" class=""><a href="#section-1">Tickets</a></li>
@@ -69,9 +105,32 @@
                     <li data-menuanchor="section-5" class=""><a href="#section-5">Watch Sport</a></li>
                     <li data-menuanchor="section-6" class=""><a href="#section-6">Contacts</a></li>
                 </ul>
-                <span class="hint">прокрути вниз</span>
-                <div class="scroll-top hide-block"></div>
+                <ul class="socials">
+                    <li>
+                        <a href="#">
+                            <img class="default" src="images/facebook.svg" alt="facebook">
+                            <img class="hover" src="images/facebook-hover.svg" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="default" src="images/youtube.svg">
+                            <img class="hover" src="images/youtube-hover.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="default" src="images/instagram.svg">
+                            <img class="hover" src="images/instagram-hover.svg">
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </div>
+        <!-- END MOBILE NAV -->
+
+        <!-- BEGIN CONTENT -->
+        <div class="content">
 
             <div id="fullpage" class="sections">
 

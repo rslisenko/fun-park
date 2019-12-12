@@ -6,13 +6,13 @@
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
-		margin-left: -15px;
-		margin-right: -15px;
+		// margin-left: -15px;
+		// margin-right: -15px;
 		margin-top: 40px;
 		padding-bottom: 100px;
 		&__item {
 			position: relative;
-			width: 33%;
+			width: 33.3%;
 			padding: 15px;
 			&:nth-child(3n - 1) {
 				top: 100px;
@@ -43,6 +43,12 @@
 			max-width: 75%;
 			margin-left: 20%;
 			padding: 40px 10px;
+			@include mq($max-1279) {
+				max-width: 90%;
+				right: -10px;
+				margin-left: 10%;
+				padding: 20px 10px;
+			}
 			.title {
 				font-size: 30px;
 				text-transform: uppercase;
@@ -50,6 +56,9 @@
 			}
 			p {
 				font-size: 18px;
+				@include mq($max-1024) {
+					display: none;
+				}
 			}
 		}
 	}

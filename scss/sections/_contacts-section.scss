@@ -1,7 +1,12 @@
 .contacts-section {
+	display: flex;
+	align-items: center;
+	&__inner {
+		width: 100%;
+	}
 	.section-title {
 		max-width: 560px;
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 	}
 	iframe {
 		width: 100%;
