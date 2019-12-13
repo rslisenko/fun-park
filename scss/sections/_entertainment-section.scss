@@ -3,6 +3,9 @@
 	margin-top: 0;
 	display: flex;
 	align-items: center;
+	@include mq($max-1023) {
+		padding-top: 40px;
+	}
 }
 .our-entertainments {
 	display: flex;
