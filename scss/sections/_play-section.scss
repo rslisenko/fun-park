@@ -3,13 +3,16 @@
 
 	}
 	.attractions {
-		width: 100%;
+		width: calc(100% + 30px);
 		display: flex;
 		flex-wrap: wrap;
-		// margin-left: -15px;
-		// margin-right: -15px;
+		margin-left: -15px;
+		margin-right: -15px;
 		margin-top: 40px;
 		padding-bottom: 100px;
+		@include mq($max-1024) {
+			margin-top: 10px;
+		}
 		&__item {
 			position: relative;
 			width: 33.3%;
@@ -53,6 +56,9 @@
 				font-size: 30px;
 				text-transform: uppercase;
 				font-weight: 800;
+				@include mq($max-1023) {
+					font-size: 20px;
+				}
 			}
 			p {
 				font-size: 18px;

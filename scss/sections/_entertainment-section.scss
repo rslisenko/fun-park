@@ -3,14 +3,23 @@
 	margin-top: 0;
 	display: flex;
 	align-items: center;
-	@include mq($max-1023) {
+	@include mq($max-1024) {
 		padding-top: 40px;
+	}
+	@include mq($max-1023) {
+		padding-top: 20px;
 	}
 }
 .our-entertainments {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
+	@include mq($max-1024) {
+		// max-width: calc(100% + 20px);
+		width: calc(100% + 20px);
+		margin-left: -10px;
+		margin-right: -10px;
+	}
 	&__item {
 		position: relative;
 		width: 33.33%;
@@ -20,12 +29,14 @@
 		&.long {
 			width: 66.66%;
 		}
-
 	}
 	.title {
 		position: relative;
 		z-index: 5;
 		text-shadow: -20px 20px 24px rgba(0, 0, 0, 0.25);
+		@include mq($max-1023) {
+			font-size: 20px;
+		}
 	}
 	.inner-wrapper {
 		position: absolute;

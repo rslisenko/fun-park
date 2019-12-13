@@ -18,6 +18,9 @@
 		@include mq($max-1279) {
 			min-height: auto;
 		}
+		@include mq($max-1024) {
+			width: 93%;
+		}
 		&:after {
 			content: "";
 			position: absolute;
@@ -38,7 +41,9 @@
 		padding: 50px 50px;
 		@include mq($max-1279) {
 			width: 100%;
-			// padding: 0 50px;
+		}
+		@include mq($max-1024) {
+			padding: 50px 35px;
 		}
 		h2 {
 			line-height: 1.2;

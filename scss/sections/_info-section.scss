@@ -1,6 +1,9 @@
 .info-section {
 	display: flex;
 	align-items: center;
+	@include mq($max-1024) {
+		padding-top: 45px;
+	}
 	&__inner {
 		display: flex;
 		flex-wrap: wrap;
@@ -70,6 +73,7 @@
 			max-width: 350px;
 			p {
 				line-height: 19px;
+				line-height: 1.36;
 			}
 		}
 	}
@@ -78,6 +82,9 @@
 		@include mq($max-1279) {
 			width: 100%;
 			padding-top: 50px;
+		}
+		@include mq($max-1024) {
+			padding-top: 33px;
 		}
 		h2 {
 			@include mq($max-1279) {
