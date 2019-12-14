@@ -11,6 +11,9 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background: $bg;
+	@include mq($max-767) {
+		background: $blue;
+	}
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: $main_font;
@@ -25,13 +28,22 @@ h2 {
 	@include mq($max-1023) {
 		font-size: 20px;
 	}
+	@include mq($max-320) {
+		font-size: 16px;
+	}
 }
 h3 {
 	font-size: 20px;
 	font-weight: 800;
+	@include mq($max-320) {
+		font-size: 16px;
+	}
 }
 h4 {
 	font-size: 18px;
+	@include mq($max-320) {
+		font-size: 12px;
+	}
 }
 h5 {
 
@@ -96,6 +108,12 @@ span {
 		@include mq($max-1024) {
 			margin-bottom: 5px;
 		}
+		@include mq($max-540) {
+			margin-bottom: 2px;
+		}
+		@include mq($max-320) {
+			font-size: 16px;
+		}
 	}
 	p {
 		font-size: 20px;
@@ -117,11 +135,14 @@ span {
 	padding-bottom: 50px;
 	margin-bottom: 10px;
 	margin-top: 10px;
-	// min-height: calc(100vh + 20px);
 	min-height: 100vh;
 	@include mq($max-1024) {
 		min-height: auto;
 		padding-bottom: 20px;
+	}
+	@include mq($max-767) {
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.fp-tableCell {
 		max-height: 100vh;
@@ -203,12 +224,117 @@ span {
 	}
 }
 
-
 // BEGIN MAIN CONTENT
 .main-content {
 	display: flex;
 	flex-wrap: wrap;
 	overflow-x: hidden;
+}
+
+//
+.mobile-top-line {
+	display: none;
+	@include mq($max-767) {
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		background-color: $blue;
+		display: flex;
+		width: 100%;
+		height: 80px;
+		align-items: center;
+		padding: 10px 20px;
+	}
+	@include mq($max-320) {
+		height: 60px;
+		padding: 5px 20px;
+	}
+	.logo-wrapper {
+		display: flex;
+		max-height: 100%;
+		@include mq($max-320) {
+			width: 130px;
+		}
+		img {
+			width: auto;
+		}
+	}
+}
+//
+.trigger-mobile-menu-btn {
+	position: fixed;
+	z-index: 111;
+	top: 40px;
+	right: 20px;
+	width: 44px;
+	height: 44px;
+	display: none;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: $red;
+	@include mq($max-1023) {
+		display: flex;
+	}
+	@include mq($max-767) {
+		top: 20px;
+		width: 40px;
+		height: 40px;
+	}
+	@include mq($max-320) {
+		top: 15px;
+		width: 30px;
+		height: 30px;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	&.open {
+		.wrapper {
+
+			&:nth-child(1) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotateZ(45deg);
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotateZ(-45deg);
+			}
+		}
+	}
+	.wrapper {
+		width: 100%;
+		height: 2px;
+		text-align: center;
+		margin-bottom: 4px;
+		// transition: rotateZ 0.3s;
+		@include mq($max-320) {
+			margin-bottom: 3px;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	span {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 16px;
+		height: 2px;
+		background-color: $white;
+		@include mq($max-320) {
+			width: 12px;
+		}
+	}
 }
 //
 .left-sidebar {
@@ -227,6 +353,9 @@ span {
 	@include mq($max-1023) {
 		width: 140px;
 		padding-top: 40px;
+	}
+	@include mq($max-767) {
+		display: none;
 	}
 	&__inner {
 		position: sticky;
@@ -337,11 +466,21 @@ span {
 	margin-top: 5px;
 	@include mq($max-1024) {
 		width: calc(100% - 280px);
-		// margin-left: 140px;
 	}
 	@include mq($max-1023) {
 		width: calc(100% - 215px);
 		margin-left: 140px;
+	}
+	@include mq($max-767) {
+		width: 100%;
+		padding-top: 80px;
+		margin-left: 0;
+	}
+	@include mq($max-640) {
+		padding-top: 70px;
+	}
+	@include mq($max-320) {
+		padding-top: 50px;
 	}
 }
 
@@ -359,69 +498,11 @@ span {
 		right: calc(100% + 50px);
 	}
 }
-//
-.trigger-mobile-menu-btn {
-	position: fixed;
-	z-index: 11;
-	top: 40px;
-	right: 20px;
-	width: 44px;
-	height: 44px;
-	display: none;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: center;
-	border-radius: 50%;
-	background-color: $red;
-	&:hover {
-		cursor: pointer;
-	}
-	@include mq($max-1023) {
-		display: flex;
-	}
-	&.open {
-		.wrapper {
 
-			&:nth-child(1) {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%) rotateZ(45deg);
-			}
-			&:nth-child(2) {
-				opacity: 0;
-			}
-			&:nth-child(3) {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%) rotateZ(-45deg);
-			}
-		}
-	}
-	.wrapper {
-		width: 100%;
-		height: 2px;
-		text-align: center;
-		margin-bottom: 4px;
-		// transition: rotateZ 0.3s;
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-	span {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width: 16px;
-		height: 2px;
-		background-color: $white;
-	}
-}
 .nav-wrapper.mobile {
 	display: none;
 	position: fixed;
-	z-index: 10;
+	z-index: 110;
 	top: 0;
 	right: 0;
 	width: 375px;
@@ -447,6 +528,9 @@ span {
 		&__item {
 			text-align: center;
 			margin-bottom: 40px;
+			@include mq($max-320) {
+				font-size: 12px;
+			}
 			&:last-child {
 				margin-bottom: 0;
 			}

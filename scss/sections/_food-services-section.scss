@@ -13,6 +13,13 @@
 	@include mq($max-1023) {
 		padding-top: 40px;
 	}
+	@include mq($max-767) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@include mq($max-540) {
+		margin-bottom: 90px;
+	}
 	&__inner {
 		position: relative;
 		height: 100%;
@@ -54,9 +61,18 @@
 		@include mq($max-1024) {
 			padding: 50px 35px;
 		}
+		@include mq($max-540) {
+			padding: 35px 25px;
+		}
+		@include mq($max-320) {
+			padding: 35px 20px;
+		}
 		h2 {
 			line-height: 1.2;
 			margin-bottom: 25px;
+			@include mq($max-540) {
+				text-align: center;
+			}
 		}
 		p {
 			line-height: 19px;
@@ -72,16 +88,47 @@
 		@include mq($max-1023) {
 			margin-top: 30px;
 		}
+		@include mq($max-1023) {
+			padding-bottom: 45vw;
+		}
+		@include mq($max-540) {
+			padding-bottom: 190px;
+		}
+		@include mq($max-320) {
+			padding-bottom: 150px;
+		}
 	}
 	.services-list {
 		display: flex;
 		height: calc(100% + 20px);
+		z-index: 5;
 		@include mq($max-1279) {
 			position: absolute;
 			width: calc(100% - 60px);
-			height: 60vw;
+			height: 620px;
 			top: 0;
 			left: 30px;
+		}
+		@include mq($max-991) {
+			width: 100%;
+		}
+		@include mq($max-768) {
+			height: 502px;
+		}
+		@include mq($max-767) {
+			width: 500px;
+			max-width: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		@include mq($max-540) {
+			width: 330px;
+			height: 300px;
+		}
+		@include mq($max-320) {
+			height: 250px;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 		&__item {
 			position: relative;
@@ -91,6 +138,12 @@
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
+			@include mq($max-540) {
+				padding: 15px 10px;
+			}
+			@include mq($max-320) {
+				padding: 15px 5px;
+			}
 			&:nth-child(1) {
 				top: -20px;
 			}
@@ -103,6 +156,17 @@
 		}
 		h3 {
 			text-transform: uppercase;
+			@include mq($max-540) {
+				font-size: 16px;
+			}
+			@include mq($max-320) {
+				font-size: 14px;
+			}
+		}
+		p {
+			@include mq($max-320) {
+				font-size: 12px;
+			}
 		}
 	}
 }

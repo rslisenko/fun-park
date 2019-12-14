@@ -13,17 +13,35 @@
 		@include mq($max-1024) {
 			margin-top: 10px;
 		}
+		@include mq($max-640) {
+			margin-left: -10px;
+			margin-right: -10px;
+			width: calc(100% + 20px);
+			padding-bottom: 40px;
+		}
 		&__item {
 			position: relative;
 			width: 33.3%;
 			padding: 15px;
+			@include mq($max-640) {
+				width: 50%;
+				padding: 10px;
+			}
 			&:nth-child(3n - 1) {
 				top: 100px;
 				@include mq($max-1024) {
 					top: 65px;
 				}
+				@include mq($max-640) {
+					top: inherit;
+				}
 				.content-wrapper {
 					align-items: flex-start;
+				}
+			}
+			&:nth-child(2n) {
+				@include mq($max-640) {
+					top: 80px;
 				}
 			}
 		}
@@ -55,12 +73,18 @@
 				margin-left: 10%;
 				padding: 20px 10px;
 			}
+			@include mq($max-320) {
+				margin-left: 0;
+			}
 			.title {
 				font-size: 30px;
 				text-transform: uppercase;
 				font-weight: 800;
 				@include mq($max-1023) {
 					font-size: 20px;
+				}
+				@include mq($max-320) {
+					font-size: 16px;
 				}
 			}
 			p {

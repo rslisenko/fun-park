@@ -4,6 +4,9 @@
 	@include mq($max-1024) {
 		padding-top: 45px;
 	}
+	@include mq($max-540) {
+		padding-top: 65px;
+	}
 	&__inner {
 		position: relative;
 		width: 100%;
@@ -35,6 +38,13 @@
 		@include mq($max-1023) {
 			margin-bottom: 5px;
 		}
+		@include mq($max-540) {
+			height: auto;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			margin-bottom: 60px;
+			background-size: cover;
+		}
 	}
 	&__body {
 		position: relative;
@@ -42,9 +52,23 @@
 		@include mq($max-1023) {
 			padding-bottom: 170px;
 		}
+		@include mq($max-540) {
+			padding-bottom: 130px;
+		}
+		@include mq($max-320) {
+			padding-bottom: 110px;
+		}
 		&:hover {
 			.bg-image {
 				opacity: 1;
+			}
+		}
+		.mobile-header-text {
+			display: none;
+			margin-bottom: 15px;
+			text-align: center;
+			@include mq($max-540) {
+				display: block;
 			}
 		}
 		.screen-wrapper {

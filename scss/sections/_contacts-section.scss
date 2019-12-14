@@ -7,6 +7,9 @@
 	.section-title {
 		max-width: 560px;
 		margin-bottom: 40px;
+		@include mq($max-540) {
+			text-align: center;
+		}
 	}
 	iframe {
 		width: 100%;

@@ -9,25 +9,36 @@
 	@include mq($max-1023) {
 		padding-top: 20px;
 	}
+	@include mq($max-640) {
+		padding-top: 0;
+	}
 }
 .our-entertainments {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
 	@include mq($max-1024) {
-		// max-width: calc(100% + 20px);
 		width: calc(100% + 20px);
 		margin-left: -10px;
 		margin-right: -10px;
+	}
+	@include mq($max-640) {
+		margin-left: -8px;
+		margin-right: -8px;
 	}
 	&__item {
 		position: relative;
 		width: 33.33%;
 		padding-bottom: 33.33%;
-		@include mq($max-1440) {
+		@include mq($max-540) {
+			width: 50%;
+			padding-bottom: 50%;
 		}
 		&.long {
 			width: 66.66%;
+			@include mq($max-540) {
+				width: 100%;
+			}
 		}
 	}
 	.title {
@@ -48,6 +59,9 @@
 		@include mq($max-1279) {
 			padding: 10px;
 		}
+		@include mq($max-640) {
+			padding: 8px;
+		}
 	}
 	.inner {
 		position: relative;
@@ -58,12 +72,31 @@
 		height: 100%;
 		flex-wrap: wrap;
 		border: 4px solid $white;
-		padding: 20px;
 		text-align: center;
 		text-transform: uppercase;
+		@include mq($max-1023) {
+			border-width: 2px;
+		}
 		&:hover {
 			.image-wrapper {
 				opacity: 1;
+			}
+		}
+		.title {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			a {
+				display: flex;
+				width: 100%;
+				height: 100%;
+				align-items: center;
+				justify-content: center;
+				padding: 20px;
+				&:focus,
+				&:hover {
+					color: $white;
+				}
 			}
 		}
 		.image-wrapper {

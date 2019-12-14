@@ -4,6 +4,10 @@
 	@include mq($max-1024) {
 		padding-top: 0px;
 	}
+	@include mq($max-640) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	&__header {
 
 	}
@@ -17,6 +21,9 @@
 		}
 		@include mq($max-1024) {
 			margin-top: 60px;
+		}
+		@include mq($max-540) {
+			margin-top: 50px;
 		}
 		&__header {
 			text-align: center;
@@ -44,6 +51,10 @@
 			@include mq($max-1023) {
 				width: 100%;
 			}
+			@include mq($max-540) {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
 		}
 		.list-item {
 			width: 50%;
@@ -51,10 +62,16 @@
 			@include mq($max-1023) {
 				padding: 10px;
 			}
+			@include mq($max-540) {
+				padding: 5px;
+			}
 			.inner {
 				border-radius: 20px;
 				overflow: hidden;
 				box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25);
+				@include mq($max-767) {
+					border-radius: 10px;
+				}
 			}
 			.image {
 				padding-bottom: 100%;
@@ -67,16 +84,32 @@
 				background-color: $white;
 				color: $black;
 				padding: 10px 15px;
+				@include mq($max-540) {
+					padding: 5px 10px;
+				}
 				img {
 					margin-right: 20px;
+					@include mq($max-540) {
+						max-width: 18px;
+						margin-right: 10px;
+					}
 				}
 				h3 {
 					text-transform: uppercase;
 					margin-bottom: 0;
+					@include mq($max-540) {
+						font-size: 14px;
+					}
+					@include mq($max-320) {
+						font-size: 12px;
+					}
 				}
 				p {
 					margin-bottom: 0;
 					line-height: 1;
+					@include mq($max-540) {
+						font-size: 12px;
+					}
 				}
 			}
 		}
@@ -129,6 +162,9 @@
 			@include mq($max-1023) {
 				max-width: none;
 			}
+			@include mq($max-540) {
+				max-width: 280px;
+			}
 		}
 		.list-item {
 			width: 100%;
@@ -137,6 +173,10 @@
 			@include mq($max-1279) {
 				width: 50%;
 				margin-bottom: 0;
+			}
+			@include mq($max-540) {
+				width: 100%;
+				margin-bottom: 10px;
 			}
 			&__inner {
 				overflow: hidden;
@@ -206,48 +246,49 @@
 						font-weight: 800;
 					}
 				}
-				.btn-wrapper {
-					width: 100%;
-					margin-top: 20px;
-					text-align: center;
-					.btn {
-						position: relative;
-						padding: 10px 15px;
-						font-size: 14px;
-						font-weight: 800;
-						letter-spacing: 0.2em;
-						text-transform: uppercase;
-						border: 2px solid $white;
-						border-radius: 20px;
-						transition: 0.3s;
+			}
+			.btn-wrapper {
+				width: 100%;
+				margin-top: 20px;
+				text-align: center;
+				.btn {
+					display: block;
+					position: relative;
+					padding: 8px 15px;
+					font-size: 14px;
+					font-weight: 800;
+					letter-spacing: 0.2em;
+					text-transform: uppercase;
+					border: 2px solid $white;
+					border-radius: 20px;
+					transition: 0.3s;
+					&:after {
+						content: "";
+						position: absolute;
+						right: 15px;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 25px;
+						height: 25px;
+						background-size: contain;
+						background-position: center;
+						background-repeat: no-repeat;
+					}
+					&:hover {
+						background-color: $red;
+						color: $white;
+					}
+					&--fb {
+						padding-right: 45px;
 						&:after {
-							content: "";
-							position: absolute;
-							right: 15px;
-							top: 50%;
-							transform: translateY(-50%);
-							width: 20px;
-							height: 20px;
-							background-size: contain;
-							background-position: center;
-							background-repeat: no-repeat;
-						}
-						&:hover {
-							background-color: $red;
-							color: $white;
-						}
-						&--fb {
-							padding-right: 45px;
-							&:after {
-								background-image: url('../images/facebook-icon.svg');
-							}
+							background-image: url('../images/facebook-icon.svg');
 						}
 					}
 				}
 			}
 			.date {
-				width: 80px;
-				padding: 10px 10px;
+				width: 90px;
+				padding: 12px 10px;
 				color: $red;
 				border-top-left-radius: 20px;
 				border-top-right-radius: 20px;
@@ -272,7 +313,10 @@
 				}
 			}
 			.info {
-				width: calc(100% - 80px);
+				display: flex;
+				flex-wrap: wrap;
+				align-content: center;
+				width: calc(100% - 90px);
 				padding: 10px 15px;
 				color: $black;
 				font-family: $main_font;
@@ -284,6 +328,7 @@
 					font-size: 20px;
 					font-weight: 500;
 					line-height: 1.1;
+					margin-bottom: 2px;
 					@include mq($max-1023) {
 						font-size: 14px;
 					}

@@ -13,6 +13,10 @@
 	}
 	h2 {
 		margin-bottom: 25px;
+		@include mq($max-320) {
+			text-align: center;
+			margin-bottom: 20px;
+		}
 	}
 	.left {
 		width: 48%;
@@ -26,6 +30,9 @@
 			display: flex;
 			flex-wrap: wrap;
 			margin-bottom: 30px;
+			@include mq($max-320) {
+				margin-bottom: 20px;
+			}
 		}
 		.ticket {
 			position: relative;
@@ -38,6 +45,14 @@
 			padding: 40px 20px 90px;
 			color: $black;
 			box-shadow: -20px 20px 24px rgba(0, 0, 0, 0.25);
+			@include mq($max-375) {
+				width: 156px;
+				height: 335px;
+			}
+			@include mq($max-320) {
+				width: 132px;
+				height: 280px;
+			}
 			&__header,
 			&__footer {
 				position: absolute;
@@ -63,6 +78,9 @@
 				@include mq($max-1023) {
 					margin-top: 75px;
 				}
+				@include mq($max-640) {
+					margin-top: 85px;
+				}
 			}
 			&__price {
 				font-family: $main_font;
@@ -77,6 +95,9 @@
 			&.ticket-2 {
 				margin-top: 60px;
 				margin-left: 30px;
+				@include mq($max-414) {
+					margin-left: auto;
+				}
 			}
 		}
 		.description {
@@ -93,9 +114,15 @@
 		@include mq($max-1024) {
 			padding-top: 33px;
 		}
+		@include mq($max-320) {
+			padding-top: 46px;
+		}
 		h2 {
 			@include mq($max-1279) {
 				max-width: 600px;
+			}
+			@include mq($max-540) {
+				text-align: center;
 			}
 		}
 		label {
@@ -109,6 +136,9 @@
 			margin-bottom: 12px;
 			background-color: transparent;
 			border: 1px solid $white;
+			@include mq($max-375) {
+				font-size: 16px;
+			}
 			&:focus {
 				background-color: $blue;
 				box-shadow: none;
@@ -128,6 +158,9 @@
 			@include mq($max-1279) {
 				text-align: left;
 			}
+			@include mq($max-540) {
+				text-align: center;
+			}
 		}
 		.confirmation-wrapper {
 			position: relative;
@@ -135,6 +168,14 @@
 			margin-bottom: 30px;
 			padding-left: 40px;
 			font-size: 14px;
+			@include mq($max-540) {
+				margin-top: 23px;
+				margin-bottom: 23px;
+			}
+			@include mq($max-320) {
+				margin-top: 18px;
+				margin-bottom: 25px;
+			}
 			input[type="checkbox"]:checked {
 				& ~ .styled-checkbox {
 					&:after {
@@ -144,6 +185,7 @@
 			}
 			label {
 				font-size: 14px;
+				line-height: 1.4;
 			}
 		}
 		.styled-checkbox {
