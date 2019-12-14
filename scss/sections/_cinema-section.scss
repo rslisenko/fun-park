@@ -1,10 +1,16 @@
 .cinema-section {
 	display: flex;
 	align-items: center;
+	@include mq($max-1024) {
+		padding-top: 45px;
+	}
 	&__inner {
 		position: relative;
 		width: 100%;
 		min-height: 90vh;
+		@include mq($max-1023) {
+			min-height: auto;
+		}
 		img {
 			width: 100%;
 			height: auto;
@@ -23,10 +29,19 @@
 			padding-right: 50px;
 			text-align: center;
 		}
+		@include mq($max-1024) {
+			margin-bottom: 30px;
+		}
+		@include mq($max-1023) {
+			margin-bottom: 5px;
+		}
 	}
 	&__body {
 		position: relative;
 		padding-bottom: 200px;
+		@include mq($max-1023) {
+			padding-bottom: 170px;
+		}
 		&:hover {
 			.bg-image {
 				opacity: 1;
@@ -71,6 +86,9 @@
 			font-size: 20px;
 			line-height: 1.2;
 			font-weight: 500;
+			@include mq($max-1023) {
+				font-size: 14px;
+			}
 		}
 	}
 }

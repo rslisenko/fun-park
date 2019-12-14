@@ -84,6 +84,9 @@ span.hide-block {
   font-size: 20px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif; }
+  @media all and (max-width: 1023px) {
+    .header-block p {
+      font-size: 14px; } }
 
 .sections {
   padding-top: 5px;
@@ -196,6 +199,7 @@ span.hide-block {
   padding: 90px 20px 30px; }
   @media all and (max-width: 1024px) {
     .left-sidebar {
+      width: 140px;
       padding: 55px 10px 20px; } }
   @media all and (max-width: 1023px) {
     .left-sidebar {
@@ -222,7 +226,7 @@ span.hide-block {
         margin-bottom: 30px; } }
     @media all and (max-width: 1023px) {
       .left-sidebar .logo-wrapper {
-        margin-bottom: 50px; } }
+        margin-bottom: 70px; } }
     .left-sidebar .logo-wrapper img {
       max-width: 73px; }
       @media all and (max-width: 1023px) {
@@ -294,6 +298,9 @@ span.hide-block {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px; }
+  @media all and (max-width: 1024px) {
+    .content {
+      width: calc(100% - 280px); } }
   @media all and (max-width: 1023px) {
     .content {
       width: calc(100% - 215px);
@@ -337,7 +344,7 @@ span.hide-block {
   background-color: #E40005; }
   .trigger-mobile-menu-btn:hover {
     cursor: pointer; }
-  @media all and (max-width: 1024px) {
+  @media all and (max-width: 1023px) {
     .trigger-mobile-menu-btn {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -458,9 +465,14 @@ span.hide-block {
   width: 100%;
   height: 100vh;
   right: 0; }
+  @media all and (max-width: 1024px) {
+    .nav-wrapper {
+      width: 140px;
+      padding-left: 15px; } }
   @media all and (max-width: 1023px) {
     .nav-wrapper {
-      display: none; } }
+      display: none;
+      padding-left: 0; } }
   .nav-wrapper .sections-nav {
     width: 100%;
     max-width: 110px;
@@ -468,6 +480,10 @@ span.hide-block {
     margin-right: auto;
     margin-top: 25vh;
     list-style-type: none; }
+    @media all and (max-width: 1024px) {
+      .nav-wrapper .sections-nav {
+        max-width: none;
+        padding-right: 20px; } }
     .nav-wrapper .sections-nav li {
       position: relative;
       padding: 2px 5px 2px 10px;
@@ -646,6 +662,9 @@ span.hide-block {
   @media all and (max-width: 1024px) {
     .info-section {
       padding-top: 45px; } }
+  @media all and (max-width: 1023px) {
+    .info-section {
+      padding-top: 35px; } }
   .info-section__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -702,19 +721,24 @@ span.hide-block {
         font-size: 14px;
         color: #00456F;
         margin-top: 60px; }
+        @media all and (max-width: 1023px) {
+          .info-section .left .ticket__days {
+            margin-top: 75px; } }
       .info-section .left .ticket__price {
         font-family: "Montserrat", sans-serif;
         font-size: 30px;
         color: #E40005;
         font-weight: 800; }
+        @media all and (max-width: 1023px) {
+          .info-section .left .ticket__price {
+            font-size: 20px;
+            margin-bottom: 15px; } }
       .info-section .left .ticket.ticket-2 {
         margin-top: 60px;
         margin-left: 30px; }
     .info-section .left .description {
-      max-width: 350px; }
-      .info-section .left .description p {
-        line-height: 19px;
-        line-height: 1.36; }
+      max-width: 350px;
+      line-height: 1.36; }
   .info-section .right {
     width: 52%; }
     @media all and (max-width: 1279px) {
@@ -756,7 +780,7 @@ span.hide-block {
     .info-section .right .confirmation-wrapper {
       position: relative;
       margin-top: 30px;
-      margin-bottom: 45px;
+      margin-bottom: 30px;
       padding-left: 40px;
       font-size: 14px; }
       .info-section .right .confirmation-wrapper input[type="checkbox"]:checked ~ .styled-checkbox:after {
@@ -820,13 +844,16 @@ span.hide-block {
     padding: 15px; }
     .play-section .attractions__item:nth-child(3n - 1) {
       top: 100px; }
+      @media all and (max-width: 1024px) {
+        .play-section .attractions__item:nth-child(3n - 1) {
+          top: 65px; } }
       .play-section .attractions__item:nth-child(3n - 1) .content-wrapper {
         -webkit-box-align: start;
         -ms-flex-align: start;
         align-items: flex-start; }
   .play-section .attractions .inner {
     position: relative;
-    padding-bottom: 200%;
+    padding-bottom: 198%;
     -webkit-box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25);
     box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25); }
   .play-section .attractions .content-wrapper {
@@ -876,7 +903,7 @@ span.hide-block {
   flex-wrap: wrap; }
   @media all and (max-width: 1024px) {
     .party-section {
-      padding-top: 40px; } }
+      padding-top: 0px; } }
   .party-section .party-block {
     width: 70%;
     margin-top: 30px; }
@@ -886,10 +913,14 @@ span.hide-block {
         -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
         order: 3; } }
+    @media all and (max-width: 1024px) {
+      .party-section .party-block {
+        margin-top: 60px; } }
     .party-section .party-block__header {
       text-align: center; }
-      .party-section .party-block__header p {
-        font-size: 20px; }
+      @media all and (max-width: 1024px) {
+        .party-section .party-block__header p {
+          margin-bottom: 10px; } }
     .party-section .party-block__list {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -905,10 +936,17 @@ span.hide-block {
           width: 93%;
           margin-left: auto;
           margin-right: auto;
-          padding-right: 0; } }
+          padding-right: 0;
+          padding-bottom: 0; } }
+      @media all and (max-width: 1023px) {
+        .party-section .party-block__list {
+          width: 100%; } }
     .party-section .party-block .list-item {
       width: 50%;
       padding: 15px; }
+      @media all and (max-width: 1023px) {
+        .party-section .party-block .list-item {
+          padding: 10px; } }
       .party-section .party-block .list-item .inner {
         border-radius: 20px;
         overflow: hidden;
@@ -959,8 +997,6 @@ span.hide-block {
       @media all and (max-width: 1024px) {
         .party-section .events-block__header {
           margin-bottom: 10px; } }
-      .party-section .events-block__header p {
-        font-size: 20px; }
     .party-section .events-block__list {
       position: relative;
       z-index: 2;
@@ -974,6 +1010,9 @@ span.hide-block {
           max-width: 93%;
           margin-left: auto;
           margin-right: auto; } }
+      @media all and (max-width: 1023px) {
+        .party-section .events-block__list {
+          max-width: none; } }
     .party-section .events-block .list-item {
       width: 100%;
       margin-bottom: 30px;
@@ -987,6 +1026,9 @@ span.hide-block {
         @media all and (max-width: 1279px) {
           .party-section .events-block .list-item__inner {
             padding: 15px; } }
+        @media all and (max-width: 1023px) {
+          .party-section .events-block .list-item__inner {
+            padding: 10px; } }
       .party-section .events-block .list-item__header {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1103,6 +1145,9 @@ span.hide-block {
           font-size: 30px;
           font-weight: 800;
           line-height: 1; }
+          @media all and (max-width: 1023px) {
+            .party-section .events-block .list-item .date .day {
+              font-size: 20px; } }
       .party-section .events-block .list-item .info {
         width: calc(100% - 80px);
         padding: 10px 15px;
@@ -1116,6 +1161,9 @@ span.hide-block {
           font-size: 20px;
           font-weight: 500;
           line-height: 1.1; }
+          @media all and (max-width: 1023px) {
+            .party-section .events-block .list-item .info span {
+              font-size: 14px; } }
       .party-section .events-block .list-item .image {
         padding-bottom: 100%;
         background-size: cover;
@@ -1135,6 +1183,12 @@ span.hide-block {
     .food-services {
       margin-bottom: 30vw;
       display: block; } }
+  @media all and (max-width: 1024px) {
+    .food-services {
+      padding-top: 10px; } }
+  @media all and (max-width: 1023px) {
+    .food-services {
+      padding-top: 40px; } }
   .food-services__inner {
     position: relative;
     height: 100%;
@@ -1152,6 +1206,9 @@ span.hide-block {
     @media all and (max-width: 1024px) {
       .food-services__inner {
         width: 93%; } }
+    @media all and (max-width: 1023px) {
+      .food-services__inner {
+        width: 100%; } }
     .food-services__inner:after {
       content: "";
       position: absolute;
@@ -1194,6 +1251,9 @@ span.hide-block {
       .food-services .right {
         width: 100%;
         padding-bottom: 30vw; } }
+    @media all and (max-width: 1023px) {
+      .food-services .right {
+        margin-top: 30px; } }
   .food-services .services-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1230,10 +1290,16 @@ span.hide-block {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media all and (max-width: 1024px) {
+    .cinema-section {
+      padding-top: 45px; } }
   .cinema-section__inner {
     position: relative;
     width: 100%;
     min-height: 90vh; }
+    @media all and (max-width: 1023px) {
+      .cinema-section__inner {
+        min-height: auto; } }
     .cinema-section__inner img {
       width: 100%;
       height: auto; }
@@ -1256,9 +1322,18 @@ span.hide-block {
         padding-left: 50px;
         padding-right: 50px;
         text-align: center; } }
+    @media all and (max-width: 1024px) {
+      .cinema-section__header {
+        margin-bottom: 30px; } }
+    @media all and (max-width: 1023px) {
+      .cinema-section__header {
+        margin-bottom: 5px; } }
   .cinema-section__body {
     position: relative;
     padding-bottom: 200px; }
+    @media all and (max-width: 1023px) {
+      .cinema-section__body {
+        padding-bottom: 170px; } }
     .cinema-section__body:hover .bg-image {
       opacity: 1; }
     .cinema-section__body .screen-wrapper {
@@ -1303,6 +1378,9 @@ span.hide-block {
       font-size: 20px;
       line-height: 1.2;
       font-weight: 500; }
+      @media all and (max-width: 1023px) {
+        .cinema-section .audience-bg p {
+          font-size: 14px; } }
 
 .contacts-section {
   display: -webkit-box;

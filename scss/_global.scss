@@ -101,6 +101,9 @@ span {
 		font-size: 20px;
 		font-weight: 500;
 		font-family: $main_font;
+		@include mq($max-1023) {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -218,6 +221,7 @@ span {
 	align-items: flex-start;
 	padding: 90px 20px 30px;
 	@include mq($max-1024) {
+		width: 140px;
 		padding: 55px 10px 20px;
 	}
 	@include mq($max-1023) {
@@ -233,14 +237,13 @@ span {
 	}
 	.logo-wrapper {
 		width: 100%;
-		// margin-bottom: 80px;
 		margin-bottom: 10vh;
 		text-align: center;
 		@include mq($max-1024) {
 			margin-bottom: 30px;
 		}
 		@include mq($max-1023) {
-			margin-bottom: 50px;
+			margin-bottom: 70px;
 		}
 		img {
 			max-width: 73px;
@@ -259,7 +262,7 @@ span {
 				margin-bottom: 42px;
 			}
 			@include mq($max-1023) {
-				// margin-bottom: 5vh;
+				// margin-bottom: 43px;
 			}
 			&:last-child {
 				margin-bottom: 0;
@@ -332,6 +335,10 @@ span {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5px;
+	@include mq($max-1024) {
+		width: calc(100% - 280px);
+		// margin-left: 140px;
+	}
 	@include mq($max-1023) {
 		width: calc(100% - 215px);
 		margin-left: 140px;
@@ -369,7 +376,7 @@ span {
 	&:hover {
 		cursor: pointer;
 	}
-	@include mq($max-1024) {
+	@include mq($max-1023) {
 		display: flex;
 	}
 	&.open {
@@ -507,8 +514,13 @@ span {
 	width: 100%;
 	height: 100vh;
 	right: 0;
+	@include mq($max-1024) {
+		width: 140px;
+		padding-left: 15px;
+	}
 	@include mq($max-1023) {
 		display: none;
+		padding-left: 0;
 	}
 	//
 	.sections-nav {
@@ -518,6 +530,11 @@ span {
 		margin-right: auto;
 		margin-top: 25vh;
 		list-style-type: none;
+		@include mq($max-1024) {
+			max-width: none;
+			padding-right: 20px;
+			// padding-left: 10px;
+		}
 		li {
 			position: relative;
 			padding: 2px 5px 2px 10px;

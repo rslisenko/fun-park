@@ -2,7 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	@include mq($max-1024) {
-		padding-top: 40px;
+		padding-top: 0px;
 	}
 	&__header {
 
@@ -16,12 +16,15 @@
 			order: 3;
 		}
 		@include mq($max-1024) {
-			// width: 93%;
+			margin-top: 60px;
 		}
 		&__header {
 			text-align: center;
 			p {
-				font-size: 20px;
+				// font-size: 20px;
+				@include mq($max-1024) {
+					margin-bottom: 10px;
+				}
 			}
 		}
 		&__list {
@@ -36,11 +39,18 @@
 				margin-left: auto;
 				margin-right: auto;
 				padding-right: 0;
+				padding-bottom: 0;
+			}
+			@include mq($max-1023) {
+				width: 100%;
 			}
 		}
 		.list-item {
 			width: 50%;
 			padding: 15px;
+			@include mq($max-1023) {
+				padding: 10px;
+			}
 			.inner {
 				border-radius: 20px;
 				overflow: hidden;
@@ -103,7 +113,7 @@
 				margin-bottom: 10px;
 			}
 			p {
-				font-size: 20px;
+				// font-size: 20px;
 			}
 		}
 		&__list {
@@ -115,6 +125,9 @@
 				max-width: 93%;
 				margin-left: auto;
 				margin-right: auto;
+			}
+			@include mq($max-1023) {
+				max-width: none;
 			}
 		}
 		.list-item {
@@ -129,6 +142,9 @@
 				overflow: hidden;
 				@include mq($max-1279) {
 					padding: 15px;
+				}
+				@include mq($max-1023) {
+					padding: 10px;
 				}
 			}
 			&__header {
@@ -250,6 +266,9 @@
 					font-size: 30px;
 					font-weight: 800;
 					line-height: 1;
+					@include mq($max-1023) {
+						font-size: 20px;
+					}
 				}
 			}
 			.info {
@@ -265,6 +284,9 @@
 					font-size: 20px;
 					font-weight: 500;
 					line-height: 1.1;
+					@include mq($max-1023) {
+						font-size: 14px;
+					}
 				}
 			}
 			.image {

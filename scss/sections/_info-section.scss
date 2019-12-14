@@ -4,6 +4,9 @@
 	@include mq($max-1024) {
 		padding-top: 45px;
 	}
+	@include mq($max-1023) {
+		padding-top: 35px;
+	}
 	&__inner {
 		display: flex;
 		flex-wrap: wrap;
@@ -57,12 +60,19 @@
 				font-size: 14px;
 				color: $blue;
 				margin-top: 60px;
+				@include mq($max-1023) {
+					margin-top: 75px;
+				}
 			}
 			&__price {
 				font-family: $main_font;
 				font-size: 30px;
 				color: $red;
 				font-weight: 800;
+				@include mq($max-1023) {
+					font-size: 20px;
+					margin-bottom: 15px;
+				}
 			}
 			&.ticket-2 {
 				margin-top: 60px;
@@ -71,10 +81,7 @@
 		}
 		.description {
 			max-width: 350px;
-			p {
-				line-height: 19px;
-				line-height: 1.36;
-			}
+			line-height: 1.36;
 		}
 	}
 	.right {
@@ -125,7 +132,7 @@
 		.confirmation-wrapper {
 			position: relative;
 			margin-top: 30px;
-			margin-bottom: 45px;
+			margin-bottom: 30px;
 			padding-left: 40px;
 			font-size: 14px;
 			input[type="checkbox"]:checked {
