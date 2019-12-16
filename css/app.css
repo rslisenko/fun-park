@@ -312,6 +312,7 @@ span.hide-block {
 
 .left-sidebar {
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 15vw;
@@ -929,17 +930,24 @@ span.hide-block {
         box-shadow: none; }
     .info-section .right input[type="submit"],
     .info-section .right button[type="submit"] {
-      padding: 11px 25px; }
+      padding: 11px 25px;
+      letter-spacing: 0.2em; }
     .info-section .right input[type="checkbox"] {
       display: none; }
-    .info-section .right .contact-form {
-      max-width: 450px; }
     @media all and (max-width: 1279px) {
       .info-section .right .btn-wrapper {
         text-align: left; } }
     @media all and (max-width: 540px) {
       .info-section .right .btn-wrapper {
         text-align: center; } }
+    .info-section .right .btn:not(.inactive) {
+      background-color: #E40005;
+      border-color: #E40005; }
+      .info-section .right .btn:not(.inactive):hover {
+        background-color: #AA090F;
+        border-color: #AA090F; }
+    .info-section .right .contact-form {
+      max-width: 450px; }
     .info-section .right .confirmation-wrapper {
       position: relative;
       margin-top: 30px;
