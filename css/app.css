@@ -187,7 +187,7 @@ span.hide-block {
   height: 330px;
   text-align: center;
   padding: 30px 40px;
-  background-color: rgba(255, 255, 255, 0.7); }
+  background-color: rgba(255, 255, 255, 0.9); }
   .send-successfuly-popup h2 {
     margin-bottom: 10px;
     font-weight: 800;
@@ -335,6 +335,9 @@ span.hide-block {
   @media all and (max-width: 767px) {
     .left-sidebar {
       display: none; } }
+  @media all and (max-height: 720px) {
+    .left-sidebar {
+      padding-top: 20px; } }
   .left-sidebar__inner {
     position: -webkit-sticky;
     position: sticky;
@@ -916,7 +919,8 @@ span.hide-block {
       font-size: 20px;
       margin-bottom: 12px;
       background-color: transparent;
-      border: 1px solid #FFFFFF; }
+      border: 1px solid #FFFFFF;
+      color: #FFFFFF; }
       @media all and (max-width: 375px) {
         .info-section .right input[type="tel"],
         .info-section .right input[type="text"],
@@ -930,7 +934,7 @@ span.hide-block {
         box-shadow: none; }
     .info-section .right input[type="submit"],
     .info-section .right button[type="submit"] {
-      padding: 11px 25px;
+      padding: 10px 25px;
       letter-spacing: 0.2em; }
     .info-section .right input[type="checkbox"] {
       display: none; }

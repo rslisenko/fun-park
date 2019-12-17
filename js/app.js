@@ -46,20 +46,6 @@ $(document).ready(function () {
 	});
 
 
-	// FORM CHECKBOX CLICK
-	$('.confirmation-wrapper input[type="checkbox"]').on('click', function () {
-		if ($(this).is(':checked')) {
-			$('.contact-form').find('input[type="submit"]').removeClass('inactive');
-		} else {
-			$('.contact-form').find('input[type="submit"]').addClass('inactive');
-		}
-	});
-
-	$('.inactive').on('click', function (event) {
-		return false;
-	});
-
-
 	// MARK ACTIVE NAV ITEM ON CLICK
 	$('.sections-nav li').on('click', function(){
 		$this = $(this);
@@ -86,6 +72,58 @@ $(document).ready(function () {
 		section.end = section.start + $(el).outerHeight();
 		sections.push(section);
 	});
+
+
+	// FORM POPUP CLOSE
+	$('.popup .btn-ok, .popup .close').on('click', function(event) {
+		$('.send-successfuly-popup').addClass('hide-block');
+	});
+
+
+	// CHECK FORM INPUTS IF NOT EMPTY
+	$('.contact-form input').on('focus keyup',  function(event) {
+		// $('.contact-form input').each(function(index, el) {
+		// 	console.log($(el), ' : ',$(el).val().length);
+		// });
+		// console.log('change');
+	});
+
+	// FORM ACTIONS
+	let localStorage = window.localStorage;
+	let $form_status_popup = $('.send-successfuly-popup');
+	$('form').on('submit', function () {
+		localStorage.setItem('form_send_status', 'ok');
+	});
+
+
+	if (localStorage.getItem('form_send_status') == 'ok') {
+		localStorage.clear();
+		$('html, body').animate({
+			scrollTop: sections[1].start
+		}, 0);
+		$form_status_popup.removeClass('hide-block');
+	} else {
+		$form_status_popup.addClass('hide-block');
+	}
+
+
+	// FORM CHECKBOX CLICK
+	$('.confirmation-wrapper input[type="checkbox"]').on('click', function () {
+		if ($(this).is(':checked')) {
+			$('.contact-form').find('input[type="submit"]').removeClass('inactive');
+			console.log('checkbox checked');
+			console.log($('.contact-form'));
+		} else {
+			$('.contact-form').find('input[type="submit"]').addClass('inactive');
+			console.log('checkbox unchecked');
+		}
+	});
+
+
+	$(document).on('click', '.inactive', function (event) {
+		return false;
+	});
+
 
 
 	// ON SCROLL

@@ -206,7 +206,7 @@ span {
 	height: 330px;
 	text-align: center;
 	padding: 30px 40px;
-	background-color: rgba($white, 0.7);
+	background-color: rgba($white, 0.9);
 	h2 {
 		margin-bottom: 10px;
 		font-weight: 800;
@@ -357,6 +357,9 @@ span {
 	}
 	@include mq($max-767) {
 		display: none;
+	}
+	@include mq($maxh-720) {
+		padding-top: 20px;
 	}
 	&__inner {
 		position: sticky;

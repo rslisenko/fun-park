@@ -204,6 +204,16 @@
                 <!-- BEGIN  INFO SECTION -->
                 <section  id="section-1" class="info-section section section-1 fp-auto-height" data-anchor="section-1">
                     <div class="info-section__inner">
+
+                        <div class="send-successfuly-popup popup hide-block">
+                            <div class="close"></div>
+                            <h2>Дякуємо!</h2>
+                            <p>Ваші дані успішно відправлені. Купон на знижку буде надіслано на вкузану пошту.</p>
+                            <div class="btn-wrapper">
+                                <div class="btn btn--red btn-ok">OK</div>
+                            </div>
+                        </div>
+
                         <div class="left">
                             <h2>Один квиток на всі розваги</h2>
                             <div class="tickets">
@@ -226,20 +236,25 @@
                         </div>
                         <div class="right">
                             <h2>Залиш контакти - гарантовано отримай знижку</h2>
-                            <form class="contact-form">
+
+                            <script type="text/javascript">var submitted=false;</script>
+                            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                            onload="if(submitted) {window.location='http://fun-park.wpdeveloper.space';}"></iframe>
+
+                            <form class="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSevakTC6ziLOmAW-Kaikz14C9F2FFBe0a5Xc3GHfMAwtPqStg/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
                                 <div class="form-row">
                                     <label><span>Ім'я</span>
-                                        <input type="text" name="name" placeholder="Ім'я">
+                                        <input type="text" name="entry.2005620554" placeholder="Ім'я" required>
                                     </label>
                                 </div>
                                 <div class="form-row">
                                     <label><span>Телефон</span>
-                                        <input type="tel" name="tel" placeholder="Телефон">
+                                        <input type="text" name="entry.1166974658" placeholder="Телефон">
                                     </label>
                                 </div>
                                 <div class="form-row">
                                     <label><span>E-mail</span>
-                                        <input type="email" name="email" placeholder="E-mail">
+                                        <input type="email" name="emailAddress" placeholder="E-mail" required>
                                     </label>
                                 </div>
                                 <div class="form-row">
@@ -249,7 +264,7 @@
                                             <span class="styled-checkbox"></span>
                                             <span>Погоджуюсь на обробку персональних даних</span>
                                         </label>
-                                    </span>
+                                    </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="btn-wrapper text-center">

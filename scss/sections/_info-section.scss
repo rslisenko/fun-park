@@ -136,6 +136,7 @@
 			margin-bottom: 12px;
 			background-color: transparent;
 			border: 1px solid $white;
+			color: $white;
 			@include mq($max-375) {
 				font-size: 16px;
 			}
@@ -146,7 +147,7 @@
 		}
 		input[type="submit"],
 		button[type="submit"] {
-			padding: 11px 25px;
+			padding: 10px 25px;
 			letter-spacing: 0.2em;
 		}
 		input[type="checkbox"] {
