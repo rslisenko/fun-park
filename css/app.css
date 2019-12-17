@@ -1380,7 +1380,8 @@ span.hide-block {
           display: block;
           font-size: 10px;
           font-weight: 600;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          color: #AA090F; }
         .party-section .events-block .list-item .date .day {
           font-family: "Montserrat", sans-serif;
           color: #AA090F;
