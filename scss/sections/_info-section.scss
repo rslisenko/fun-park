@@ -164,9 +164,11 @@
 		.btn:not(.inactive) {
 			background-color: $red;
 			border-color: $red;
+			box-shadow: -20px 20px 24px rgba(0, 0, 0, 0.25);
 			&:hover {
 				background-color: $brown;
 				border-color: $brown;
+				box-shadow: -10px 10px 14px rgba(0, 0, 0, 0.25);
 			}
 		}
 		.contact-form {

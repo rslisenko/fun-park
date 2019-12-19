@@ -1,16 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Open+Sans:400,600,800&display=swap');
 
 body {
-	background-color: green;
 	font-family: $second_font;
 	font-size: 14px;
-	background: $blue;
 	color: $white;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background: $bg;
 	@include mq($max-767) {
 		background: $blue;
 	}
@@ -226,9 +223,22 @@ span {
 
 // BEGIN MAIN CONTENT
 .main-content {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	overflow-x: hidden;
+	.radial-bg {
+		position: fixed;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: radial-gradient(30vw 30vw at 73.12% 27.76%, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F;
+		@include mq($max-540) {
+			background: radial-gradient(50vw 50vw at 73.12% 40.76%, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F;
+		}
+	}
 }
 
 //
@@ -358,9 +368,12 @@ span {
 	@include mq($max-767) {
 		display: none;
 	}
-	@include mq($maxh-720) {
-		padding-top: 20px;
-	}
+	// @include mq($maxh-800) {
+	// 	padding-top: 30px;
+	// }
+	// @include mq($maxh-720) {
+	// 	padding-top: 20px;
+	// }
 	&__inner {
 		position: sticky;
 		top: 30px;
@@ -377,6 +390,9 @@ span {
 		}
 		@include mq($max-1023) {
 			margin-bottom: 70px;
+		}
+		@include mq($maxh-800) {
+			margin-bottom: 40px;
 		}
 		img {
 			max-width: 73px;
@@ -396,6 +412,9 @@ span {
 			}
 			@include mq($max-1023) {
 				// margin-bottom: 43px;
+			}
+			@include mq($maxh-800) {
+				margin-bottom: 35px;
 			}
 			&:last-child {
 				margin-bottom: 0;
@@ -691,21 +710,38 @@ span {
 		margin-right: auto;
 	}
 	//
-	.scroll-top {
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		margin-left: auto;
-		margin-right: auto;
-		background-color: $red;
-		background-image: url('../images/arrow-up.svg');
-		background-size: 20px;
-		background-position: center;
-		background-repeat: no-repeat;
-		transition: 0.3s;
-		&:hover {
-			cursor: pointer;
-		}
+}
+.scroll-top-wrapper {
+	position: fixed;
+	z-index: 100;
+	width: 15vw;
+	right: 0;
+	bottom: 200px;
+	@include mq($max-1023) {
+		width: 75px;
+	}
+}
+.scroll-top {
+	width: 40px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	background-color: $red;
+	background-image: url('../images/arrow-up.svg');
+	background-size: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: 0.3s;
+	@include mq($max-1023) {
+		right: 20px;
+	}
+	@include mq($max-320) {
+		width: 30px;
+		height: 30px;
+	}
+	&:hover {
+		cursor: pointer;
 	}
 }
 

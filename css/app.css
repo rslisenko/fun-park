@@ -1,17 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Open+Sans:400,600,800&display=swap");
 body {
-  background-color: green;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  background: #00456F;
   color: #FFFFFF;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background: -webkit-radial-gradient(73.12% 27.76%, 33.53% 68.95%, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F;
-  background: -o-radial-gradient(73.12% 27.76%, 33.53% 68.95%, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F;
-  background: radial-gradient(33.53% 68.95% at 73.12% 27.76%, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F; }
+  background-attachment: fixed; }
   @media all and (max-width: 767px) {
     body {
       background: #00456F; } }
@@ -199,12 +194,28 @@ span.hide-block {
     margin-top: 30px; }
 
 .main-content {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   overflow-x: hidden; }
+  .main-content .radial-bg {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: -webkit-radial-gradient(73.12% 27.76%, 30vw 30vw, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F;
+    background: -o-radial-gradient(73.12% 27.76%, 30vw 30vw, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F;
+    background: radial-gradient(30vw 30vw at 73.12% 27.76%, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F; }
+    @media all and (max-width: 540px) {
+      .main-content .radial-bg {
+        background: -webkit-radial-gradient(73.12% 40.76%, 50vw 50vw, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F;
+        background: -o-radial-gradient(73.12% 40.76%, 50vw 50vw, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F;
+        background: radial-gradient(50vw 50vw at 73.12% 40.76%, rgba(255, 255, 255, 0.3) 0%, rgba(1, 69, 111, 0.3) 100%), #00456F; } }
 
 .mobile-top-line {
   display: none; }
@@ -335,9 +346,6 @@ span.hide-block {
   @media all and (max-width: 767px) {
     .left-sidebar {
       display: none; } }
-  @media all and (max-height: 720px) {
-    .left-sidebar {
-      padding-top: 20px; } }
   .left-sidebar__inner {
     position: -webkit-sticky;
     position: sticky;
@@ -360,6 +368,9 @@ span.hide-block {
     @media all and (max-width: 1023px) {
       .left-sidebar .logo-wrapper {
         margin-bottom: 70px; } }
+    @media all and (max-height: 800px) {
+      .left-sidebar .logo-wrapper {
+        margin-bottom: 40px; } }
     .left-sidebar .logo-wrapper img {
       max-width: 73px; }
       @media all and (max-width: 1023px) {
@@ -374,6 +385,9 @@ span.hide-block {
       @media all and (max-width: 1024px) {
         .left-sidebar .working-info__item {
           margin-bottom: 42px; } }
+      @media all and (max-height: 800px) {
+        .left-sidebar .working-info__item {
+          margin-bottom: 35px; } }
       .left-sidebar .working-info__item:last-child {
         margin-bottom: 0; }
     .left-sidebar .working-info a, .left-sidebar .working-info p {
@@ -644,22 +658,40 @@ span.hide-block {
     width: 110%;
     margin-left: auto;
     margin-right: auto; }
-  .nav-wrapper .scroll-top {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #E40005;
-    background-image: url("../images/arrow-up.svg");
-    background-size: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; }
-    .nav-wrapper .scroll-top:hover {
-      cursor: pointer; }
+
+.scroll-top-wrapper {
+  position: fixed;
+  z-index: 100;
+  width: 15vw;
+  right: 0;
+  bottom: 200px; }
+  @media all and (max-width: 1023px) {
+    .scroll-top-wrapper {
+      width: 75px; } }
+
+.scroll-top {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  background-color: #E40005;
+  background-image: url("../images/arrow-up.svg");
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  @media all and (max-width: 1023px) {
+    .scroll-top {
+      right: 20px; } }
+  @media all and (max-width: 320px) {
+    .scroll-top {
+      width: 30px;
+      height: 30px; } }
+  .scroll-top:hover {
+    cursor: pointer; }
 
 .entertainments {
   padding-top: 0;
@@ -709,13 +741,6 @@ span.hide-block {
       @media all and (max-width: 540px) {
         .our-entertainments__item.long {
           width: 100%; } }
-  .our-entertainments .title {
-    position: relative;
-    z-index: 5;
-    text-shadow: -20px 20px 24px rgba(0, 0, 0, 0.25); }
-    @media all and (max-width: 1023px) {
-      .our-entertainments .title {
-        font-size: 20px; } }
   .our-entertainments .inner-wrapper {
     position: absolute;
     top: 0;
@@ -750,14 +775,37 @@ span.hide-block {
     @media all and (max-width: 1023px) {
       .our-entertainments .inner {
         border-width: 2px; } }
+    .our-entertainments .inner:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      -webkit-box-shadow: inset -15px 15px 24px rgba(0, 0, 0, 0.1), -20px 20px 24px rgba(0, 0, 0, 0.1);
+      box-shadow: inset -15px 15px 24px rgba(0, 0, 0, 0.1), -20px 20px 24px rgba(0, 0, 0, 0.1); }
+      @media all and (max-width: 540px) {
+        .our-entertainments .inner:before {
+          -webkit-box-shadow: inset -10px 10px 15px rgba(0, 0, 0, 0.1), -15px 15px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: inset -10px 10px 15px rgba(0, 0, 0, 0.1), -15px 15px 15px rgba(0, 0, 0, 0.1); } }
     .our-entertainments .inner:hover .image-wrapper {
       opacity: 1; }
     .our-entertainments .inner .title {
+      position: relative;
+      z-index: 5;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       width: 100%;
       height: 100%; }
+      @media all and (max-width: 1023px) {
+        .our-entertainments .inner .title {
+          font-size: 20px; } }
+      .our-entertainments .inner .title span {
+        text-shadow: -20px 20px 24px rgba(0, 0, 0, 0.25); }
+        @media all and (max-width: 540px) {
+          .our-entertainments .inner .title span {
+            text-shadow: -15px 15px 15px rgba(0, 0, 0, 0.25); } }
       .our-entertainments .inner .title a {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -946,10 +994,14 @@ span.hide-block {
         text-align: center; } }
     .info-section .right .btn:not(.inactive) {
       background-color: #E40005;
-      border-color: #E40005; }
+      border-color: #E40005;
+      -webkit-box-shadow: -20px 20px 24px rgba(0, 0, 0, 0.25);
+      box-shadow: -20px 20px 24px rgba(0, 0, 0, 0.25); }
       .info-section .right .btn:not(.inactive):hover {
         background-color: #AA090F;
-        border-color: #AA090F; }
+        border-color: #AA090F;
+        -webkit-box-shadow: -10px 10px 14px rgba(0, 0, 0, 0.25);
+        box-shadow: -10px 10px 14px rgba(0, 0, 0, 0.25); }
     .info-section .right .contact-form {
       max-width: 450px; }
     .info-section .right .confirmation-wrapper {
@@ -1167,11 +1219,23 @@ span.hide-block {
       @media all and (max-width: 540px) {
         .party-section .party-block .list-item {
           padding: 5px; } }
+      .party-section .party-block .list-item:nth-child(2n-1) {
+        z-index: 5; }
       .party-section .party-block .list-item .inner {
+        position: relative;
+        z-index: 2;
         border-radius: 20px;
         overflow: hidden;
         -webkit-box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25);
         box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25); }
+        .party-section .party-block .list-item .inner:before {
+          content: "";
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
         @media all and (max-width: 767px) {
           .party-section .party-block .list-item .inner {
             border-radius: 10px; } }
