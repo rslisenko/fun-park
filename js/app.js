@@ -13,6 +13,7 @@ function is_phone_number(input_val) {
     }
 }
 
+
 $(document).ready(function () {
 
 	// GLOBAL VARS
@@ -93,14 +94,19 @@ $(document).ready(function () {
 
 
 	// CHECK FORM INPUTS IF NOT EMPTY
+	let val = 0;
 	$('.contact-form .phone').on('keyup',  function(event) {
 		$this = $(this);
-		console.log($this.val());
-		// console.log('change');
-		if (is_phone_number($this.val())) {
-			console.log('phone');
+		val = $this.val().replace(/[^\d]/g, '');
+		$this.val(val);
+		console.log(val);
+		if (is_phone_number(val)) {
+			$this.addClass('valid');
+			$this.removeClass('invalid');
 		} else {
-			console.log('not phone');
+			$this.addClass('invalid');
+			$this.removeClass('valid');
+			// console.log('not phone');
 		}
 	});
 
