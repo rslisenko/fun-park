@@ -124,6 +124,9 @@
 			bottom: 0;
 			left: 0;
 			transition: 0.5s;
+			@include mq($max-1023) {
+				opacity: 1;
+			}
 		}
 	}
 }

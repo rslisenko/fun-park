@@ -4,16 +4,21 @@ function in_range(current, start, end) {
 	return current > start && current < end ? true : false;
 }
 
+function is_phone_number(input_val) {
+  	let phone_number = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+  	if(input_val.match(phone_number)) {
+      	return true;
+    } else {
+        return false;
+    }
+}
+
 $(document).ready(function () {
 
-	// $('#fullpage').fullpage({
-	// 	anchors : ['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6', 'section-7'],
-	// 	menu : '#sections-nav',
-	// 	autoScrolling : true,
-	// 	scrollOverflow : true,
-	// 	scrollHorizontally : true,
-	// 	verticalCentered : false
-	// });
+	// GLOBAL VARS
+	let $page_overlay = $('.page-overlay');
+	let localStorage = window.localStorage;
+	let $form_status_popup = $('.send-successfuly-popup');
 
 
 	// SCROLL ON ANCOR CLICK
@@ -81,25 +86,28 @@ $(document).ready(function () {
 
 	// FORM POPUP CLOSE
 	$('.popup .btn-ok, .popup .close').on('click', function(event) {
+		console.log('close');
 		$('.send-successfuly-popup').addClass('hide-block');
+		$page_overlay.removeClass('show-overlay');
 	});
 
 
 	// CHECK FORM INPUTS IF NOT EMPTY
-	$('.contact-form input').on('focus keyup',  function(event) {
-		// $('.contact-form input').each(function(index, el) {
-		// 	console.log($(el), ' : ',$(el).val().length);
-		// });
+	$('.contact-form .phone').on('keyup',  function(event) {
+		$this = $(this);
+		console.log($this.val());
 		// console.log('change');
+		if (is_phone_number($this.val())) {
+			console.log('phone');
+		} else {
+			console.log('not phone');
+		}
 	});
 
 	// FORM ACTIONS
-	let localStorage = window.localStorage;
-	let $form_status_popup = $('.send-successfuly-popup');
 	$('form').on('submit', function () {
 		localStorage.setItem('form_send_status', 'ok');
 	});
-
 
 	if (localStorage.getItem('form_send_status') == 'ok') {
 		localStorage.clear();
@@ -107,8 +115,10 @@ $(document).ready(function () {
 			scrollTop: sections[1].start
 		}, 0);
 		$form_status_popup.removeClass('hide-block');
+		$page_overlay.addClass('show-overlay');
 	} else {
 		$form_status_popup.addClass('hide-block');
+		$page_overlay.removeClass('show-overlay');
 	}
 
 
@@ -116,11 +126,11 @@ $(document).ready(function () {
 	$('.confirmation-wrapper input[type="checkbox"]').on('click', function () {
 		if ($(this).is(':checked')) {
 			$('.contact-form').find('input[type="submit"]').removeClass('inactive');
-			console.log('checkbox checked');
+			// console.log('checkbox checked');
 			console.log($('.contact-form'));
 		} else {
 			$('.contact-form').find('input[type="submit"]').addClass('inactive');
-			console.log('checkbox unchecked');
+			// console.log('checkbox unchecked');
 		}
 	});
 

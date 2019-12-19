@@ -66,13 +66,19 @@
 			&__footer {
 				bottom: -6px;
 			}
+			&__image {
+				max-width: 55px;
+				@include mq($max-320) {
+					max-width: 44px;
+				}
+			}
 			&__days,
 			&__price {
 				width: 100%;
 				text-align: center;
 			}
 			&__days {
-				font-size: 14px;
+				font-size: 20px;
 				color: $blue;
 				margin-top: 60px;
 				@include mq($max-1023) {
@@ -80,6 +86,9 @@
 				}
 				@include mq($max-640) {
 					margin-top: 85px;
+				}
+				@include mq($max-320) {
+					font-size: 16px;
 				}
 			}
 			&__price {

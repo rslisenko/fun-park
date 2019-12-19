@@ -167,6 +167,7 @@ span {
 	padding: 20px;
 	color: $black;
 	transition: 0.3s;
+	box-shadow: -20px 20px 24px rgba(0, 0, 0, 0.25);
 	&.hide-block {
 
 	}
@@ -199,11 +200,18 @@ span {
 	}
 }
 .send-successfuly-popup {
+	position: fixed;
+	z-index: 111;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 330px;
 	height: 330px;
 	text-align: center;
 	padding: 30px 40px;
-	background-color: rgba($white, 0.9);
+	background-color: rgba($white, 0.7);
+	-webkit-backdrop-filter: blur(2px);
+	 backdrop-filter: blur(2px);
 	h2 {
 		margin-bottom: 10px;
 		font-weight: 800;
@@ -216,8 +224,24 @@ span {
 	.btn-wrapper {
 		margin-top: 30px;
 		.btn {
-
+			border: none;
 		}
+	}
+}
+
+//
+.page-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0;
+	background-color: rgba($black, 0.25);
+	&.show-overlay {
+		z-index: 105;
+		opacity: 1;
 	}
 }
 
@@ -263,6 +287,7 @@ span {
 	.logo-wrapper {
 		display: flex;
 		max-height: 100%;
+		width: 160px;
 		@include mq($max-320) {
 			width: 130px;
 		}
@@ -745,3 +770,45 @@ span {
 	}
 }
 
+.footer-mobile {
+	display: none;
+	padding: 50px 0 100px;
+	@include mq($max-767) {
+		display: block;
+	}
+	&__inner {
+		max-width: 340px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.working-info {
+		display: flex;
+		&__item {
+			width: 33.33%;
+			text-align: center;
+			font-size: 12px;
+			span {
+				font-weight: 600;
+				display: block;
+			}
+		}
+		img {
+			margin-bottom: 15px;
+		}
+		a {
+			display: block;
+		}
+		p {
+			margin-bottom: 5px;
+		}
+	}
+	.socials {
+		margin: 30px auto;
+		li {
+			a {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}
