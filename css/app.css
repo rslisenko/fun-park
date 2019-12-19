@@ -518,6 +518,8 @@ span.hide-block {
   right: 0;
   width: 375px;
   height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
   max-width: 100%;
   background-color: #AA090F;
   padding: 100px 20px 20px;
@@ -694,7 +696,8 @@ span.hide-block {
   bottom: 200px; }
   @media all and (max-width: 1023px) {
     .scroll-top-wrapper {
-      width: 75px; } }
+      width: 75px;
+      bottom: 50px; } }
 
 .scroll-top {
   width: 40px;
@@ -712,7 +715,8 @@ span.hide-block {
   transition: 0.3s; }
   @media all and (max-width: 1023px) {
     .scroll-top {
-      right: 20px; } }
+      right: 20px;
+      background-size: 14px; } }
   @media all and (max-width: 320px) {
     .scroll-top {
       width: 30px;
@@ -722,7 +726,7 @@ span.hide-block {
 
 .footer-mobile {
   display: none;
-  padding: 50px 0 100px; }
+  padding: 50px 0 50px; }
   @media all and (max-width: 767px) {
     .footer-mobile {
       display: block; } }

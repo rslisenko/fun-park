@@ -555,6 +555,8 @@ span {
 	right: 0;
 	width: 375px;
 	height: 100%;
+	max-height: 100vh;
+	overflow-y: auto;
 	max-width: 100%;
 	background-color: $brown;
 	padding: 100px 20px 20px;
@@ -744,6 +746,7 @@ span {
 	bottom: 200px;
 	@include mq($max-1023) {
 		width: 75px;
+		bottom: 50px;
 	}
 }
 .scroll-top {
@@ -760,6 +763,7 @@ span {
 	transition: 0.3s;
 	@include mq($max-1023) {
 		right: 20px;
+		background-size: 14px;
 	}
 	@include mq($max-320) {
 		width: 30px;
@@ -772,7 +776,7 @@ span {
 
 .footer-mobile {
 	display: none;
-	padding: 50px 0 100px;
+	padding: 50px 0 50px;
 	@include mq($max-767) {
 		display: block;
 	}
