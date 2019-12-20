@@ -445,6 +445,16 @@ span {
 				margin-bottom: 0;
 			}
 			&:hover {
+				.image-wrapper {
+					.icon--default {
+						opacity: 0;
+						z-index: 0;
+					}
+					.icon--hover {
+						opacity: 1;
+						z-index: 2;
+					}
+				}
 			}
 		}
 		a, p {
@@ -466,6 +476,28 @@ span {
 		}
 		img {
 			margin-bottom: 10px;
+		}
+		.image-wrapper {
+			display: inline-block;
+			position: relative;
+			width: 30px;
+			height: 30px;
+			.icon {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				transition: 0.1s;
+				&--default {
+					z-index: 2;
+					opacity: 1;
+				}
+				&--hover {
+					z-index: 0;
+					opacity: 0;
+				}
+			}
 		}
 	}
 }
@@ -756,7 +788,7 @@ span {
 	margin-right: auto;
 	border-radius: 50%;
 	background-color: $red;
-	background-image: url('../images/arrow-up.svg');
+	background-image: url('../images/arrow-top.svg');
 	background-size: 20px;
 	background-position: center;
 	background-repeat: no-repeat;

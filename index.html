@@ -37,7 +37,10 @@
                 </div>
                 <div class="working-info">
                     <div class="working-info__item">
-                        <img class="icon" src="images/location.svg">
+                        <div class="image-wrapper">
+                            <img class="icon icon--default" src="images/location.svg">
+                            <img class="icon icon--hover" src="images/location-icon-hover.svg">
+                        </div>
                         <a href="#section-6">м. Кривий Ріг <br/>вул. Єсеніна, 16</a>
                     </div>
                     <div class="working-info__item">
@@ -58,7 +61,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href=""  target="_blank">
+                        <a href="https://www.youtube.com/channel/UCSrq-WvZxvIZVr4NxGe3KMQ"  target="_blank">
                             <img class="default" src="images/youtube.svg">
                             <img class="hover" src="images/youtube-hover.svg">
                         </a>
@@ -154,7 +157,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" target="_blank">
+                        <a href="https://www.youtube.com/channel/UCSrq-WvZxvIZVr4NxGe3KMQ" target="_blank">
                             <img class="default" src="images/youtube-icon.svg">
                         </a>
                     </li>
@@ -256,23 +259,23 @@
                             <form class="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSevakTC6ziLOmAW-Kaikz14C9F2FFBe0a5Xc3GHfMAwtPqStg/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
                                 <div class="form-row">
                                     <label><span>Ім'я</span>
-                                        <input type="text" name="entry.2005620554" placeholder="Ім'я" required>
+                                        <input class="invalid" type="text" name="entry.2005620554" placeholder="Ім'я" required>
                                     </label>
                                 </div>
                                 <div class="form-row">
                                     <label><span>Телефон</span>
-                                        <input class="phone" type="text" name="entry.1166974658" placeholder="Телефон">
+                                        <input class="phone invalid" type="text" name="entry.1166974658" placeholder="0XXXXXXXXX">
                                     </label>
                                 </div>
                                 <div class="form-row">
                                     <label><span>E-mail</span>
-                                        <input class="email" type="email" name="emailAddress" placeholder="E-mail" required>
+                                        <input class="email invalid" type="email" name="emailAddress" placeholder="E-mail" required>
                                     </label>
                                 </div>
                                 <div class="form-row">
                                     <div class="confirmation-wrapper input-wrapper">
                                         <label>
-                                            <input type="checkbox" name="confirmation">
+                                            <input class="invalid" type="checkbox" name="confirmation">
                                             <span class="styled-checkbox"></span>
                                             <span>Погоджуюсь на обробку персональних даних</span>
                                         </label>
@@ -467,6 +470,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="attractions__item">
+                            <div class="inner">
+                                <div class="content-wrapper cover" style="background-image: url('images/play/funpark-18.jpg');">
+                                    <div class="content">
+                                        <h3 class="title"></h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <!-- END PLAY SECTION -->
@@ -499,8 +512,8 @@
                                     <div class="description">
                                         <img src="images/party/item-logo.svg" alt="logo" class="logo">
                                         <div class="text">
-                                            <h3>Дискотека</h3>
-                                            <p>Fun_disco</p>
+                                            <h3>КАРАОКЕ</h3>
+                                            <p>Fun_karaoke</p>
                                         </div>
                                     </div>
                                 </div>
@@ -512,8 +525,8 @@
                                     <div class="description">
                                         <img src="images/party/item-logo.svg" alt="logo" class="logo">
                                         <div class="text">
-                                            <h3>Дискотека</h3>
-                                            <p>Fun_disco</p>
+                                            <h3>КОНЦЕНРТ ХОЛ</h3>
+                                            <p>Fun_concert_hall</p>
                                         </div>
                                     </div>
                                 </div>
@@ -525,8 +538,8 @@
                                     <div class="description">
                                         <img src="images/party/item-logo.svg" alt="logo" class="logo">
                                         <div class="text">
-                                            <h3>Дискотека</h3>
-                                            <p>Fun_disco</p>
+                                            <h3>КОРПОРАТИВ</h3>
+                                            <p>Fun_corporate</p>
                                         </div>
                                     </div>
                                 </div>
@@ -538,8 +551,8 @@
                                     <div class="description">
                                         <img src="images/party/item-logo.svg" alt="logo" class="logo">
                                         <div class="text">
-                                            <h3>Дискотека</h3>
-                                            <p>Fun_disco</p>
+                                            <h3>ДЕНЬ НАРОДЖЕННЯ</h3>
+                                            <p>Fun_birthday</p>
                                         </div>
                                     </div>
                                 </div>
@@ -551,8 +564,8 @@
                                     <div class="description">
                                         <img src="images/party/item-logo.svg" alt="logo" class="logo">
                                         <div class="text">
-                                            <h3>Дискотека</h3>
-                                            <p>Fun_disco</p>
+                                            <h3>ВЕЧІРКА ПЕРЕД ВЕСІЛЛЯМ</h3>
+                                            <p>Fun_pre_wedding_party</p>
                                         </div>
                                     </div>
                                 </div>
@@ -665,7 +678,7 @@
                     <div class="food-services__inner">
                         <div class="left">
                             <h2>Улюблена кухня зі всього світу.</h2>
-                            <p>Надзвичайно апетитне Fun-меню на всі випадки життя: легкий перекус чи справжній бенкет з друзями –  смакуватиме кожному. Обирайте!.</p>
+                            <p>Надзвичайно апетитне Fun-меню на всі випадки життя: легкий перекус чи справжній бенкет з друзями –  смакуватиме кожному. Обирайте!</p>
                         </div>
                         <div class="right">
                             <div class="services-list">
@@ -743,7 +756,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="_blank">
+                                <a href="https://www.youtube.com/channel/UCSrq-WvZxvIZVr4NxGe3KMQ" target="_blank">
                                     <img class="default" src="images/youtube-icon.svg">
                                 </a>
                             </li>

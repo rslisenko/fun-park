@@ -97,7 +97,7 @@
 				display: flex;
 				background-color: $white;
 				color: $black;
-				padding: 10px 15px;
+				padding: 10px 15px 15px;
 				@include mq($max-540) {
 					padding: 5px 10px;
 				}
@@ -290,6 +290,7 @@
 					}
 					&:hover {
 						background-color: $red;
+						border-color: $red;
 						color: $white;
 					}
 					&--fb {

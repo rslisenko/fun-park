@@ -13,6 +13,25 @@ function is_phone_number(input_val) {
     }
 }
 
+function is_email_valid (email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
+
+function is_form_valid($form) {
+	let is_valid = true;
+	$form.find('input').each(function(index, el) {
+		let is_filed_valid = false;
+		if ($(el).hasClass('invalid')) {
+			is_filed_valid = false;
+		} else {
+			is_filed_valid = true;
+		}
+		is_valid = is_valid && is_filed_valid;
+	});
+
+	return is_valid;
+}
+
 
 $(document).ready(function () {
 
@@ -20,6 +39,7 @@ $(document).ready(function () {
 	let $page_overlay = $('.page-overlay');
 	let localStorage = window.localStorage;
 	let $form_status_popup = $('.send-successfuly-popup');
+	let $contact_form = $('.contact-form');
 
 
 	// SCROLL ON ANCOR CLICK
@@ -95,20 +115,67 @@ $(document).ready(function () {
 
 	// CHECK FORM INPUTS IF NOT EMPTY
 	let val = 0;
-	$('.contact-form .phone').on('keyup',  function(event) {
+	$('.contact-form input').on('keyup',  function(event) {
 		$this = $(this);
-		val = $this.val().replace(/[^\d]/g, '');
-		$this.val(val);
-		console.log(val);
-		if (is_phone_number(val)) {
+
+		if ($this.hasClass('phone')) {
+			val = $this.val().replace(/[^\d]/g, '');
+			val = val.length > 10 ? val.substring(0,10) : val;
+			$this.val(val);
+
+			if (is_phone_number(val) && val.length > 0) {
+				$this.addClass('valid');
+				$this.removeClass('invalid');
+			} else {
+				$this.addClass('invalid');
+				$this.removeClass('valid');
+			}
+		} else if($this.hasClass('email')) {
+			if (is_email_valid($this.val()) && $this.val().length > 5) {
+				$this.addClass('valid');
+				$this.removeClass('invalid');
+			} else {
+				$this.removeClass('valid');
+				$this.addClass('invalid');
+			}
+		} else {
+			if ($this.val().length > 3) {
+				$this.addClass('valid');
+				$this.removeClass('invalid');
+			} else {
+				$this.removeClass('valid');
+				$this.addClass('invalid');
+			}
+		}
+
+		if (is_form_valid($contact_form)) {
+			$('.contact-form').find('input[type="submit"]').removeClass('inactive');
+		} else {
+			$('.contact-form').find('input[type="submit"]').addClass('inactive');
+		}
+	});
+	//
+
+
+	// FORM CHECKBOX CLICK
+	$('.confirmation-wrapper input[type="checkbox"]').on('click', function () {
+		$this = $(this);
+
+		if ($this.is(':checked')) {
 			$this.addClass('valid');
 			$this.removeClass('invalid');
 		} else {
-			$this.addClass('invalid');
 			$this.removeClass('valid');
-			// console.log('not phone');
+			$this.addClass('invalid');
+		}
+
+		if (is_form_valid($contact_form)) {
+			$('.contact-form').find('input[type="submit"]').removeClass('inactive');
+		} else {
+			$('.contact-form').find('input[type="submit"]').addClass('inactive');
 		}
 	});
+
 
 	// FORM ACTIONS
 	$('form').on('submit', function () {
@@ -127,18 +194,6 @@ $(document).ready(function () {
 		$page_overlay.removeClass('show-overlay');
 	}
 
-
-	// FORM CHECKBOX CLICK
-	$('.confirmation-wrapper input[type="checkbox"]').on('click', function () {
-		if ($(this).is(':checked')) {
-			$('.contact-form').find('input[type="submit"]').removeClass('inactive');
-			// console.log('checkbox checked');
-			console.log($('.contact-form'));
-		} else {
-			$('.contact-form').find('input[type="submit"]').addClass('inactive');
-			// console.log('checkbox unchecked');
-		}
-	});
 
 
 	$(document).on('click', '.inactive', function (event) {

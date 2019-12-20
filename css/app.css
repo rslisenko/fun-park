@@ -417,6 +417,12 @@ span.hide-block {
           margin-bottom: 35px; } }
       .left-sidebar .working-info__item:last-child {
         margin-bottom: 0; }
+      .left-sidebar .working-info__item:hover .image-wrapper .icon--default {
+        opacity: 0;
+        z-index: 0; }
+      .left-sidebar .working-info__item:hover .image-wrapper .icon--hover {
+        opacity: 1;
+        z-index: 2; }
     .left-sidebar .working-info a, .left-sidebar .working-info p {
       max-width: 120px;
       display: block;
@@ -433,6 +439,26 @@ span.hide-block {
         font-weight: 800; }
     .left-sidebar .working-info img {
       margin-bottom: 10px; }
+    .left-sidebar .working-info .image-wrapper {
+      display: inline-block;
+      position: relative;
+      width: 30px;
+      height: 30px; }
+      .left-sidebar .working-info .image-wrapper .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: 0.1s;
+        -o-transition: 0.1s;
+        transition: 0.1s; }
+        .left-sidebar .working-info .image-wrapper .icon--default {
+          z-index: 2;
+          opacity: 1; }
+        .left-sidebar .working-info .image-wrapper .icon--hover {
+          z-index: 0;
+          opacity: 0; }
 
 .socials {
   width: 120px;
@@ -706,7 +732,7 @@ span.hide-block {
   margin-right: auto;
   border-radius: 50%;
   background-color: #E40005;
-  background-image: url("../images/arrow-up.svg");
+  background-image: url("../images/arrow-top.svg");
   background-size: 20px;
   background-position: center;
   background-repeat: no-repeat;
@@ -1349,7 +1375,7 @@ span.hide-block {
         display: flex;
         background-color: #FFFFFF;
         color: #1B1C20;
-        padding: 10px 15px; }
+        padding: 10px 15px 15px; }
         @media all and (max-width: 540px) {
           .party-section .party-block .list-item .description {
             padding: 5px 10px; } }
@@ -1530,6 +1556,7 @@ span.hide-block {
             background-repeat: no-repeat; }
           .party-section .events-block .list-item .btn-wrapper .btn:hover {
             background-color: #E40005;
+            border-color: #E40005;
             color: #FFFFFF; }
           .party-section .events-block .list-item .btn-wrapper .btn--fb {
             padding-right: 45px; }
