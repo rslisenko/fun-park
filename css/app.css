@@ -271,6 +271,9 @@ span.hide-block {
     display: flex;
     max-height: 100%;
     width: 160px; }
+    @media all and (max-width: 1024px) {
+      .mobile-top-line .logo-wrapper {
+        display: block; } }
     @media all and (max-width: 320px) {
       .mobile-top-line .logo-wrapper {
         width: 130px; } }
@@ -554,7 +557,8 @@ span.hide-block {
   transform: translateX(100%);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s; }
+  transition: 0.5s;
+  -webkit-overflow-scrolling: touch; }
   @media all and (max-width: 1023px) {
     .nav-wrapper.mobile {
       display: block; } }
@@ -1022,6 +1026,7 @@ span.hide-block {
             margin-top: 85px; } }
         @media all and (max-width: 320px) {
           .info-section .left .ticket__days {
+            margin-top: 60px;
             font-size: 16px; } }
       .info-section .left .ticket__price {
         font-family: "Montserrat", sans-serif;
@@ -1241,16 +1246,14 @@ span.hide-block {
   .play-section .attractions .content {
     position: relative;
     z-index: 2;
-    right: -50px;
+    right: 0;
     width: 100%;
     max-width: 75%;
-    margin-left: 20%;
+    margin-left: 30px;
     padding: 40px 10px; }
     @media all and (max-width: 1279px) {
       .play-section .attractions .content {
         max-width: 90%;
-        right: -10px;
-        margin-left: 10%;
         padding: 20px 10px; } }
     @media all and (max-width: 320px) {
       .play-section .attractions .content {
@@ -1349,6 +1352,8 @@ span.hide-block {
       .party-section .party-block .list-item .inner {
         position: relative;
         z-index: 2;
+        height: 100%;
+        background-color: #FFFFFF;
         border-radius: 20px;
         overflow: hidden;
         -webkit-box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25);
@@ -1378,13 +1383,29 @@ span.hide-block {
         padding: 10px 15px 15px; }
         @media all and (max-width: 540px) {
           .party-section .party-block .list-item .description {
-            padding: 5px 10px; } }
+            padding: 5px 10px;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start; } }
+        @media all and (max-width: 375px) {
+          .party-section .party-block .list-item .description {
+            padding: 5px 5px 8px 5px; } }
+        @media all and (max-width: 320px) {
+          .party-section .party-block .list-item .description {
+            padding-left: 7px; } }
         .party-section .party-block .list-item .description img {
           margin-right: 20px; }
           @media all and (max-width: 540px) {
             .party-section .party-block .list-item .description img {
+              margin-top: 3px;
               max-width: 18px;
               margin-right: 10px; } }
+          @media all and (max-width: 375px) {
+            .party-section .party-block .list-item .description img {
+              margin-right: 5px; } }
+          @media all and (max-width: 320px) {
+            .party-section .party-block .list-item .description img {
+              display: none; } }
         .party-section .party-block .list-item .description h3 {
           text-transform: uppercase;
           margin-bottom: 0; }
@@ -1400,6 +1421,9 @@ span.hide-block {
           @media all and (max-width: 540px) {
             .party-section .party-block .list-item .description p {
               font-size: 12px; } }
+          @media all and (max-width: 320px) {
+            .party-section .party-block .list-item .description p {
+              font-size: 11px; } }
   .party-section .events-block {
     position: relative;
     width: 30%;
@@ -1538,9 +1562,9 @@ span.hide-block {
           text-transform: uppercase;
           border: 2px solid #FFFFFF;
           border-radius: 20px;
-          -webkit-transition: 0.3s;
-          -o-transition: 0.3s;
-          transition: 0.3s; }
+          -webkit-transition: background-color 0.2s;
+          -o-transition: background-color 0.2s;
+          transition: background-color 0.2s; }
           .party-section .events-block .list-item .btn-wrapper .btn:after {
             content: "";
             position: absolute;
@@ -1644,6 +1668,7 @@ span.hide-block {
       margin-bottom: 90px; } }
   .food-services__inner {
     position: relative;
+    z-index: 2;
     height: 100%;
     min-height: 630px;
     display: -webkit-box;
@@ -1652,7 +1677,9 @@ span.hide-block {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     background-color: #AA090F;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    -webkit-box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25);
+    box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25); }
     @media all and (max-width: 1279px) {
       .food-services__inner {
         min-height: auto; } }
@@ -1706,6 +1733,41 @@ span.hide-block {
           text-align: center; } }
     .food-services .left p {
       line-height: 19px; }
+    .food-services .left .restaurant-menu-wrapper {
+      width: 100%;
+      max-width: 200px;
+      margin-right: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-top: 50px; }
+      .food-services .left .restaurant-menu-wrapper a {
+        position: relative;
+        padding-left: 40px;
+        line-height: 30px;
+        margin-bottom: 20px; }
+        @media all and (max-width: 1024px) {
+          .food-services .left .restaurant-menu-wrapper a {
+            width: auto;
+            margin-right: 50px; } }
+        @media all and (max-width: 540px) {
+          .food-services .left .restaurant-menu-wrapper a {
+            margin-right: 0; } }
+        .food-services .left .restaurant-menu-wrapper a:hover {
+          text-decoration: underline;
+          color: #FFFFFF; }
+        .food-services .left .restaurant-menu-wrapper a:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 30px;
+          height: 30px;
+          background-image: url("../images/food-services/menu-icon.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat; }
   .food-services .right {
     position: relative;
     width: 60%; }
@@ -1715,9 +1777,7 @@ span.hide-block {
         padding-bottom: 30vw; } }
     @media all and (max-width: 1023px) {
       .food-services .right {
-        margin-top: 30px; } }
-    @media all and (max-width: 1023px) {
-      .food-services .right {
+        margin-top: 30px;
         padding-bottom: 45vw; } }
     @media all and (max-width: 540px) {
       .food-services .right {
@@ -1777,10 +1837,19 @@ span.hide-block {
           padding: 15px 5px; } }
       .food-services .services-list__item:nth-child(1) {
         top: -20px; }
+        @media all and (max-width: 1024px) {
+          .food-services .services-list__item:nth-child(1) {
+            top: 0; } }
       .food-services .services-list__item:nth-child(2) {
         top: 30px; }
+        @media all and (max-width: 1024px) {
+          .food-services .services-list__item:nth-child(2) {
+            top: -30px; } }
       .food-services .services-list__item:nth-child(3) {
         top: -50px; }
+        @media all and (max-width: 1024px) {
+          .food-services .services-list__item:nth-child(3) {
+            top: 30px; } }
     .food-services .services-list h3 {
       text-transform: uppercase; }
       @media all and (max-width: 540px) {
@@ -1861,14 +1930,28 @@ span.hide-block {
       .cinema-section__body {
         padding-bottom: 110px; } }
     .cinema-section__body:hover .bg-image {
-      opacity: 1; }
-    .cinema-section__body .mobile-header-text {
-      display: none;
-      margin-bottom: 15px;
-      text-align: center; }
+      opacity: 1;
+      z-index: 0; }
+    .cinema-section__body .header-text {
+      position: absolute;
+      top: 50px;
+      left: 30px; }
       @media all and (max-width: 540px) {
-        .cinema-section__body .mobile-header-text {
-          display: block; } }
+        .cinema-section__body .header-text {
+          position: static;
+          margin-bottom: 15px;
+          text-align: center; } }
+      .cinema-section__body .header-text.desktop {
+        display: block; }
+        @media all and (max-width: 767px) {
+          .cinema-section__body .header-text.desktop {
+            display: none; } }
+      .cinema-section__body .header-text.mobile {
+        display: none;
+        text-align: center; }
+        @media all and (max-width: 767px) {
+          .cinema-section__body .header-text.mobile {
+            display: block; } }
     .cinema-section__body .screen-wrapper {
       position: relative;
       overflow: hidden; }
@@ -1878,7 +1961,8 @@ span.hide-block {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: calc(100% - 200px);
+      border: 3px solid #FFFFFF;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -1886,6 +1970,15 @@ span.hide-block {
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 0.3s; }
+      @media all and (max-width: 1023px) {
+        .cinema-section__body .bg-image {
+          height: calc(100% - 170px); } }
+      @media all and (max-width: 540px) {
+        .cinema-section__body .bg-image {
+          height: calc(100% - 130px); } }
+      @media all and (max-width: 320px) {
+        .cinema-section__body .bg-image {
+          height: calc(100% - 110px); } }
   .cinema-section .audience-bg {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1899,11 +1992,11 @@ span.hide-block {
     bottom: 0;
     right: -50px;
     background-position: center bottom;
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
     padding-left: 50px;
     padding-right: 50px; }
-    @media all and (max-width: 1279px) {
+    @media all and (max-width: 320px) {
       .cinema-section .audience-bg {
         background-size: 120%; } }
     .cinema-section .audience-bg p {
@@ -1931,6 +2024,8 @@ span.hide-block {
       .contacts-section .section-title {
         text-align: center; } }
   .contacts-section iframe {
-    width: 100%; }
+    width: 100%;
+    -webkit-box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25);
+    box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25); }
 
 

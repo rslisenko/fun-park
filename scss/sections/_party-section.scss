@@ -71,6 +71,8 @@
 			.inner {
 				position: relative;
 				z-index: 2;
+				height: 100%;
+				background-color: $white;
 				border-radius: 20px;
 				overflow: hidden;
 				box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25);
@@ -100,12 +102,26 @@
 				padding: 10px 15px 15px;
 				@include mq($max-540) {
 					padding: 5px 10px;
+					align-items: flex-start;
+				}
+				@include mq($max-375) {
+					padding: 5px 5px 8px 5px;
+				}
+				@include mq($max-320) {
+					padding-left: 7px;
 				}
 				img {
 					margin-right: 20px;
 					@include mq($max-540) {
+						margin-top: 3px;
 						max-width: 18px;
 						margin-right: 10px;
+					}
+					@include mq($max-375) {
+						margin-right: 5px;
+					}
+					@include mq($max-320) {
+						display: none;
 					}
 				}
 				h3 {
@@ -123,6 +139,9 @@
 					line-height: 1;
 					@include mq($max-540) {
 						font-size: 12px;
+					}
+					@include mq($max-320) {
+						font-size: 11px;
 					}
 				}
 			}
@@ -275,7 +294,7 @@
 					text-transform: uppercase;
 					border: 2px solid $white;
 					border-radius: 20px;
-					transition: 0.3s;
+					transition: background-color 0.2s;
 					&:after {
 						content: "";
 						position: absolute;
