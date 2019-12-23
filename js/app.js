@@ -113,6 +113,12 @@ $(document).ready(function () {
 	});
 
 
+	//
+	$('.hint-wrapper .hint').on('click', function () {
+		let section_number = $('.sections-nav').find('.active').data('order');
+		console.log(section_number);
+	});
+
 	// CHECK FORM INPUTS IF NOT EMPTY
 	let val = 0;
 	$('.contact-form input').on('keyup',  function(event) {

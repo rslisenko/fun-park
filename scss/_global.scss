@@ -764,13 +764,13 @@ span {
 		}
 	}
 	.scroll-top-wrapper {
-		position: absolute;
-		display: flex;
-		justify-content: center;
-		bottom: 10vh;
-		width: 110%;
-		margin-left: auto;
-		margin-right: auto;
+		// position: absolute;
+		// display: flex;
+		// justify-content: center;
+		// bottom: 10vh;
+		// width: 110%;
+		// margin-left: auto;
+		// margin-right: auto;
 	}
 	//
 }
@@ -779,7 +779,7 @@ span {
 	z-index: 100;
 	width: 15vw;
 	right: 0;
-	bottom: 200px;
+	bottom: 170px;
 	@include mq($max-1023) {
 		width: 75px;
 		bottom: 50px;

@@ -705,25 +705,13 @@ span.hide-block {
       top: 7px;
       right: calc(100% + 10px);
       background-color: #FFFFFF; }
-  .nav-wrapper .scroll-top-wrapper {
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    bottom: 10vh;
-    width: 110%;
-    margin-left: auto;
-    margin-right: auto; }
 
 .scroll-top-wrapper {
   position: fixed;
   z-index: 100;
   width: 15vw;
   right: 0;
-  bottom: 200px; }
+  bottom: 170px; }
   @media all and (max-width: 1023px) {
     .scroll-top-wrapper {
       width: 75px;
