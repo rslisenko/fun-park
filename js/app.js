@@ -36,6 +36,7 @@ function is_form_valid($form) {
 $(document).ready(function () {
 
 	// GLOBAL VARS
+	const vh = $(window).height();
 	let $page_overlay = $('.page-overlay');
 	let localStorage = window.localStorage;
 	let $form_status_popup = $('.send-successfuly-popup');
@@ -66,7 +67,6 @@ $(document).ready(function () {
 
 	// MOBILE MENU ITEM CLICK
 	$('.trigger-mobile-menu-btn').on('click', function () {
-		// console.log('click');
 		$(this).toggleClass('open');
 		$('.nav-wrapper.mobile').toggleClass('show-nav');
 	});
@@ -85,7 +85,6 @@ $(document).ready(function () {
 			$this.addClass('active');
 		}, 800);
 		if ($(window).width() < 769) {
-			console.log('< 769');
 			$('.trigger-mobile-menu-btn').removeClass('open');
 			$('.nav-wrapper.mobile').removeClass('show-nav');
 		}
@@ -102,12 +101,14 @@ $(document).ready(function () {
 		section.start = $(el).offset().top;
 		section.end = section.start + $(el).outerHeight();
 		sections.push(section);
+		if (section.end - section.start <= vh) {
+			$(el).addClass('screen-height-section');
+		}
 	});
 
 
 	// FORM POPUP CLOSE
 	$('.popup .btn-ok, .popup .close').on('click', function(event) {
-		console.log('close');
 		$('.send-successfuly-popup').addClass('hide-block');
 		$page_overlay.removeClass('show-overlay');
 	});
@@ -117,6 +118,9 @@ $(document).ready(function () {
 	$('.hint-wrapper .hint').on('click', function () {
 		let section_number = $('.sections-nav').find('.active').data('order');
 		console.log(section_number);
+		$('html, body').animate({
+			scrollTop: sections[section_number].end
+		}, 500);
 	});
 
 	// CHECK FORM INPUTS IF NOT EMPTY
@@ -160,8 +164,6 @@ $(document).ready(function () {
 			$('.contact-form').find('input[type="submit"]').addClass('inactive');
 		}
 	});
-	//
-
 
 	// FORM CHECKBOX CLICK
 	$('.confirmation-wrapper input[type="checkbox"]').on('click', function () {
@@ -201,7 +203,6 @@ $(document).ready(function () {
 	}
 
 
-
 	$(document).on('click', '.inactive', function (event) {
 		return false;
 	});
@@ -209,7 +210,6 @@ $(document).ready(function () {
 
 
 	// ON SCROLL
-	let vh = $(window).height();
 	let offset_top = 0;
 	let current_section = '';
 	let last_index = sections.length - 1;
@@ -224,12 +224,13 @@ $(document).ready(function () {
 				$('.sections-nav li').removeClass('active');
 				$('.sections-nav li:first-child').addClass('active');
 			} else {
+				if (current_section) {}
 				if (in_range(offset_top + vh, item.start, item.end)) {
-					current_section = '".section-' + i + '"';
 					$('.sections-nav li').removeClass('active');
 					$(".sections-nav").find('[data-menuanchor="section-'+i+'"]').addClass('active');
-					if (i == 3) {
-						console.log('section 3');
+					$current_section = $('.section-' + i);
+					if ($current_section.hasClass('screen-height-section')) {
+						console.log('match');
 					}
 					if (i == last_index) {
 						$scroll_top_btn.removeClass('hide-block');
