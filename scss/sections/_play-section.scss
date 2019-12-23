@@ -1,4 +1,7 @@
 .play-section {
+	@include mq($max-1024) {
+		padding-bottom: 80px;
+	}
 	&__header {
 
 	}
@@ -72,6 +75,10 @@
 			&:hover {
 				&:before {
 					background-color: rgba($black, 0.4);
+					@include mq($max-1023) {
+						display: none;
+						// background-color: rgba($black, 0);
+					}
 				}
 				.content {
 					p {
@@ -93,8 +100,11 @@
 				max-width: 90%;
 				padding: 20px 10px;
 			}
-			@include mq($max-320) {
+			@include mq($max-540) {
+				max-width: 100%;
 				margin-left: 0;
+				padding-left: 10px;
+				padding-right: 10px;
 			}
 			.title {
 				font-size: 30px;
