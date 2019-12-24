@@ -711,7 +711,7 @@ span.hide-block {
 
 .scroll-top-wrapper {
   position: fixed;
-  z-index: 100;
+  z-index: 9;
   width: 15vw;
   right: 0;
   bottom: 170px; }

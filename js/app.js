@@ -4,13 +4,8 @@ function in_range(current, start, end) {
 	return current > start && current < end ? true : false;
 }
 
-function is_phone_number(input_val) {
-  	let phone_number = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
-  	if(input_val.match(phone_number)) {
-      	return true;
-    } else {
-        return false;
-    }
+function is_phone_number(phone) {
+    return /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/.test(phone);
 }
 
 function is_email_valid (email) {
