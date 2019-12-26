@@ -1222,6 +1222,11 @@ span.hide-block {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end; }
+    @media all and (max-width: 1023px) {
+      .play-section .attractions .content-wrapper {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start; } }
     .play-section .attractions .content-wrapper:before {
       content: "";
       position: absolute;
@@ -1237,7 +1242,7 @@ span.hide-block {
       background-color: rgba(27, 28, 32, 0.4); }
       @media all and (max-width: 1023px) {
         .play-section .attractions .content-wrapper:hover:before {
-          display: none; } }
+          background-color: rgba(27, 28, 32, 0.6); } }
     .play-section .attractions .content-wrapper:hover .content p {
       top: 0;
       opacity: 1; }
@@ -1253,10 +1258,14 @@ span.hide-block {
       .play-section .attractions .content {
         max-width: 90%;
         padding: 20px 10px; } }
-    @media all and (max-width: 540px) {
+    @media all and (max-width: 1023px) {
       .play-section .attractions .content {
         max-width: 100%;
         margin-left: 0;
+        padding-right: 15px;
+        padding-left: 15px; } }
+    @media all and (max-width: 540px) {
+      .play-section .attractions .content {
         padding-left: 10px;
         padding-right: 10px; } }
     .play-section .attractions .content .title {
@@ -1278,9 +1287,9 @@ span.hide-block {
       -webkit-transition: 0.5s;
       -o-transition: 0.5s;
       transition: 0.5s; }
-      @media all and (max-width: 1024px) {
+      @media all and (max-width: 1023px) {
         .play-section .attractions .content p {
-          display: none; } }
+          font-size: 16px; } }
 
 .party-section {
   display: -webkit-box;
@@ -1410,6 +1419,12 @@ span.hide-block {
         .party-section .party-block .list-item .description h3 {
           text-transform: uppercase;
           margin-bottom: 0; }
+          @media all and (max-width: 1023px) {
+            .party-section .party-block .list-item .description h3 {
+              font-size: 18px; } }
+          @media all and (max-width: 767px) {
+            .party-section .party-block .list-item .description h3 {
+              font-size: 16px; } }
           @media all and (max-width: 540px) {
             .party-section .party-block .list-item .description h3 {
               font-size: 14px; } }

@@ -203,6 +203,10 @@ $(document).ready(function () {
 	});
 
 
+	$(window).on("mousewheel", function(event) {
+		event.preventDefault();
+	});
+
 
 	// ON SCROLL
 	let offset_top = 0;
@@ -226,6 +230,9 @@ $(document).ready(function () {
 					$current_section = $('.section-' + i);
 					if ($current_section.hasClass('screen-height-section')) {
 						console.log('match');
+						// $('html, body').animate({
+							// scrollTop: sections[i].end + 5
+						// }, 500);
 					}
 					if (i == last_index) {
 						$scroll_top_btn.removeClass('hide-block');
@@ -238,5 +245,6 @@ $(document).ready(function () {
 			}
 		});
 	});
+
 
 });

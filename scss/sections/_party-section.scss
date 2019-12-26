@@ -127,6 +127,12 @@
 				h3 {
 					text-transform: uppercase;
 					margin-bottom: 0;
+					@include mq($max-1023) {
+						font-size: 18px;
+					}
+					@include mq($max-767) {
+						font-size: 16px;
+					}
 					@include mq($max-540) {
 						font-size: 14px;
 					}
