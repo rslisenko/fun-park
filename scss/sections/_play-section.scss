@@ -79,7 +79,6 @@
 				&:before {
 					background-color: rgba($black, 0.4);
 					@include mq($max-1023) {
-						// display: none;
 						background-color: rgba($black, 0.6);
 					}
 				}

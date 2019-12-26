@@ -212,8 +212,10 @@ $(document).ready(function () {
 	let offset_top = 0;
 	let current_section = '';
 	let last_index = sections.length - 1;
-	$scroll_top_btn = $('.scroll-top');
-	$hint = $('.hint');
+	let $scroll_top_btn = $('.scroll-top');
+	let $hint = $('.hint');
+	let is_scroll_down = true;
+    let scroll_old_pos = 0;
 
 	$(document).on('scroll', function(event) {
 		offset_top = $(this).scrollTop();
@@ -230,9 +232,15 @@ $(document).ready(function () {
 					$current_section = $('.section-' + i);
 					if ($current_section.hasClass('screen-height-section')) {
 						console.log('match');
-						// $('html, body').animate({
-							// scrollTop: sections[i].end + 5
-						// }, 500);
+						// if (scroll_old_pos < offset_top) {
+						// 	$('html, body').animate({
+						// 		scrollTop: sections[i+1].start + 15
+						// 	}, 500);
+						// } else {
+						// 	$('html, body').animate({
+						// 		scrollTop: sections[i-1].end - 15
+						// 	}, 500);
+						// }
 					}
 					if (i == last_index) {
 						$scroll_top_btn.removeClass('hide-block');
@@ -244,6 +252,7 @@ $(document).ready(function () {
 				}
 			}
 		});
+		scroll_old_pos = offset_top;
 	});
 
 
