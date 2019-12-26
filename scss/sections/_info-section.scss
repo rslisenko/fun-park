@@ -81,7 +81,8 @@
 				font-size: 20px;
 				color: $blue;
 				margin-top: 60px;
-				@include mq($max-1023) {
+				@include mq($max-1024) {
+					font-size: 18px;
 					margin-top: 75px;
 				}
 				@include mq($max-640) {
@@ -97,7 +98,7 @@
 				font-size: 30px;
 				color: $red;
 				font-weight: 800;
-				@include mq($max-1023) {
+				@include mq($max-1024) {
 					font-size: 20px;
 					margin-bottom: 15px;
 				}
@@ -111,8 +112,41 @@
 			}
 		}
 		.description {
-			max-width: 350px;
-			line-height: 1.36;
+			max-width: 370px;
+			p {
+				position: relative;
+				line-height: 1.36;
+				margin-bottom: 20px;
+				&.bonus-item {
+					font-size: 20px;
+					margin-bottom: 25px;
+					padding-left: 40px;
+					&:before {
+						content: "";
+						position: absolute;
+						left: 0;
+						width: 30px;
+						height: 30px;
+						background-size: contain;
+						background-position: center;
+						background-repeat: no-repeat;
+					}
+				}
+				&.clarification {
+					font-size: 12px;
+					margin-bottom: 10px;
+				}
+			}
+			.child {
+				&:before {
+					background-image: url('../images/info/child-icon.svg');
+				}
+			}
+			.birthday {
+				&:before {
+					background-image: url('../images/info/conus-icon.svg');
+				}
+			}
 		}
 	}
 	.right {
@@ -169,6 +203,13 @@
 			}
 			@include mq($max-540) {
 				text-align: center;
+			}
+			.btn {
+				margin-left: auto;
+				margin-right: auto;
+				@include mq($max-1024) {
+					margin-left: 0;
+				}
 			}
 		}
 		.btn:not(.inactive) {

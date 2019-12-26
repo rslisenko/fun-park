@@ -110,9 +110,9 @@
 			max-width: 155px;
 			text-align: center;
 		}
-		@include mq($max-1023) {
+		@include mq($max-1024) {
 			font-size: 20px;
-			top: 4.5vw;
+			top: 5vw;
 		}
 		@include mq($max-767) {
 			font-size: 16px;
@@ -137,10 +137,10 @@
 			@include mq($max-1200) {
 				top: 4vw;
 			}
-			@include mq($max-1023) {
+			@include mq($max-1024) {
 				font-size: 20px;
 				max-width: 300px;
-				top: 4.5vw;
+				top: 5vw;
 			}
 			@include mq($max-767) {
 				display: none;

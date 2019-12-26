@@ -36,6 +36,9 @@ $(document).ready(function () {
 	let localStorage = window.localStorage;
 	let $form_status_popup = $('.send-successfuly-popup');
 	let $contact_form = $('.contact-form');
+	let $red_block = $('.red-block');
+	let $nav_wrapper = $('.nav-wrapper');
+	let $events_block = $('.events-block');
 
 
 	// SCROLL ON ANCOR CLICK
@@ -203,9 +206,7 @@ $(document).ready(function () {
 	});
 
 
-	$(window).on("mousewheel", function(event) {
-		event.preventDefault();
-	});
+
 
 
 	// ON SCROLL
@@ -216,9 +217,31 @@ $(document).ready(function () {
 	let $hint = $('.hint');
 	let is_scroll_down = true;
     let scroll_old_pos = 0;
+    let red_block_start = $red_block.offset().top;
+    let red_block_end = red_block_start + $red_block.height();
+    let events_block_start = $events_block.offset().top;
+    let events_block_end = events_block_start + $events_block.height();
+    // console.log('red_block_start: ', red_block_start);
+    // console.log('red_block_end: ', red_block_end);
 
 	$(document).on('scroll', function(event) {
 		offset_top = $(this).scrollTop();
+		// console.log(offset_top);
+
+		if ((offset_top + vh/2) - 100 > red_block_start && (offset_top + vh/2) - 100 < red_block_end) {
+			$nav_wrapper.addClass('red');
+		} else {
+			$nav_wrapper.removeClass('red');
+		}
+
+		if ($(window).width() < 1280) {
+
+			if ((offset_top + vh/2) - 100 > events_block_start && (offset_top + vh/2) - 100 < events_block_end) {
+				$nav_wrapper.addClass('red');
+			} else {
+				$nav_wrapper.removeClass('red');
+			}
+		}
 
 		sections.forEach(function(item, i , arr) {
 			if (offset_top == 0) {
@@ -230,18 +253,7 @@ $(document).ready(function () {
 					$('.sections-nav li').removeClass('active');
 					$(".sections-nav").find('[data-menuanchor="section-'+i+'"]').addClass('active');
 					$current_section = $('.section-' + i);
-					if ($current_section.hasClass('screen-height-section')) {
-						console.log('match');
-						// if (scroll_old_pos < offset_top) {
-						// 	$('html, body').animate({
-						// 		scrollTop: sections[i+1].start + 15
-						// 	}, 500);
-						// } else {
-						// 	$('html, body').animate({
-						// 		scrollTop: sections[i-1].end - 15
-						// 	}, 500);
-						// }
-					}
+
 					if (i == last_index) {
 						$scroll_top_btn.removeClass('hide-block');
 						$hint.addClass('hide-block');
@@ -254,6 +266,5 @@ $(document).ready(function () {
 		});
 		scroll_old_pos = offset_top;
 	});
-
 
 });
