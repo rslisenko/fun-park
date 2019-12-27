@@ -254,16 +254,17 @@ $(document).ready(function () {
 					$(".sections-nav").find('[data-menuanchor="section-'+i+'"]').addClass('active');
 					$current_section = $('.section-' + i);
 
-					if (i == last_index) {
-						$scroll_top_btn.removeClass('hide-block');
-						$hint.addClass('hide-block');
-					} else {
-						$scroll_top_btn.addClass('hide-block');
-						$hint.removeClass('hide-block');
-					}
 				}
 			}
 		});
+		if (offset_top > vh) {
+			$scroll_top_btn.removeClass('hide-block');
+			// $hint.addClass('hide-block');
+		} else {
+			$scroll_top_btn.addClass('hide-block');
+			// $hint.removeClass('hide-block');
+		}
+
 		scroll_old_pos = offset_top;
 	});
 
