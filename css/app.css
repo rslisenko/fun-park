@@ -754,6 +754,9 @@ span.hide-block {
     .scroll-top-wrapper {
       width: 75px;
       bottom: 50px; } }
+  @media all and (max-width: 540px) {
+    .scroll-top-wrapper {
+      right: 0; } }
 
 .scroll-top {
   width: 40px;
@@ -1155,6 +1158,9 @@ span.hide-block {
       @media all and (max-width: 1024px) {
         .info-section .right .btn-wrapper .btn {
           margin-left: 0; } }
+      @media all and (max-width: 767px) {
+        .info-section .right .btn-wrapper .btn {
+          margin-left: auto; } }
     .info-section .right .btn:not(.inactive) {
       background-color: #E40005;
       border-color: #E40005;
@@ -2013,7 +2019,7 @@ span.hide-block {
     margin-left: -50px;
     margin-right: -50px;
     margin-bottom: 60px; }
-    @media all and (max-width: 1279px) {
+    @media all and (max-width: 1440px) {
       .cinema-section__header {
         padding-left: 50px;
         padding-right: 50px;
@@ -2146,6 +2152,9 @@ span.hide-block {
     @media all and (max-width: 1023px) {
       .cinema-section .audience-bg {
         bottom: -110px; } }
+    @media all and (max-width: 540px) {
+      .cinema-section .audience-bg {
+        background-position-y: 75px; } }
     @media all and (max-width: 320px) {
       .cinema-section .audience-bg {
         background-size: 120%; } }

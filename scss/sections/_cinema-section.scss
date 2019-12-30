@@ -29,7 +29,7 @@
 		margin-left: -50px;
 		margin-right: -50px;
 		margin-bottom: 60px;
-		@include mq($max-1279) {
+		@include mq($max-1440) {
 			padding-left: 50px;
 			padding-right: 50px;
 			text-align: center;
@@ -183,8 +183,8 @@
 		@include mq($max-1023) {
 			bottom: -110px;
 		}
-		@include mq($max-767) {
-			// bottom: -100px;
+		@include mq($max-540) {
+			background-position-y: 75px;
 		}
 		@include mq($max-320) {
 			background-size: 120%;

@@ -4,8 +4,12 @@ function in_range(current, start, end) {
 	return current > start && current < end ? true : false;
 }
 
-function is_phone_number(phone) {
-    return /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/.test(phone);
+function is_phone_number(phone_input) {
+	let $this = $(phone_input);
+	let current_input_val = $this.val() > 12 ? $this.val().substring(0,12) : $this.val();
+	$this.val(current_input_val.replace(/\D/g, ''));
+
+	return $this.val().match(/^38\d{10}$/) ? true : false;
 }
 
 function is_email_valid (email) {
@@ -121,17 +125,27 @@ $(document).ready(function () {
 		}, 500);
 	});
 
+	//
+	$('.contact-form input').on('focus', function () {
+		$this = $(this);
+		if ($this.hasClass('phone')) {
+			$this.val('380');
+		}
+	});
+
 	// CHECK FORM INPUTS IF NOT EMPTY
 	let val = 0;
 	$('.contact-form input').on('keyup',  function(event) {
 		$this = $(this);
 
 		if ($this.hasClass('phone')) {
-			val = $this.val().replace(/[^\d]/g, '');
-			val = val.length > 10 ? val.substring(0,10) : val;
-			$this.val(val);
-
-			if (is_phone_number(val) && val.length > 0) {
+			// val = $this.val().replace(/[^\d]/g, '');
+			// val = val.length > 12 ? val.substring(0,12) : val;
+			// $this.val(val);
+			if ($this.val().length < 3) {
+				$this.val('380');
+			}
+			if (is_phone_number($this)) {
 				$this.addClass('valid');
 				$this.removeClass('invalid');
 			} else {
@@ -182,10 +196,10 @@ $(document).ready(function () {
 		}
 	});
 
-
 	// FORM ACTIONS
 	$('form').on('submit', function () {
 		localStorage.setItem('form_send_status', 'ok');
+		window.location = window.location.origin;
 	});
 
 	if (localStorage.getItem('form_send_status') == 'ok') {
@@ -207,8 +221,6 @@ $(document).ready(function () {
 
 
 
-
-
 	// ON SCROLL
 	let offset_top = 0;
 	let current_section = '';
@@ -221,14 +233,11 @@ $(document).ready(function () {
     let red_block_end = red_block_start + $red_block.height();
     let events_block_start = $events_block.offset().top;
     let events_block_end = events_block_start + $events_block.height();
-    // console.log('red_block_start: ', red_block_start);
-    // console.log('red_block_end: ', red_block_end);
 
 	$(document).on('scroll', function(event) {
 		offset_top = $(this).scrollTop();
-		// console.log(offset_top);
 
-		if ((offset_top + vh/2) - 100 > red_block_start && (offset_top + vh/2) - 100 < red_block_end) {
+		if ((offset_top + vh/2) - 50 > red_block_start && (offset_top + vh/2) - 50 < red_block_end) {
 			$nav_wrapper.addClass('red');
 		} else {
 			$nav_wrapper.removeClass('red');

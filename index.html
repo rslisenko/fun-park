@@ -9,8 +9,33 @@
     <link rel="stylesheet" href="css/vendors/foundation.min.css">
     <link rel="stylesheet" href="css/vendors/fullpage.min.css">
     <link rel="stylesheet" href="css/app.css">
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T997D8F');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154674133-1"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-154674133-1');
+        gtag('event', 'page_view', { 'send_to': 'UA-154674133-1' });
+    </script>
+
 </head>
-<body class="home-page" data-hijacking="off" data-animation="none">
+<body class="home-page">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T997D8F" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div class="page-overlay"></div>
 
@@ -26,6 +51,34 @@
     <div class="main-content">
 
         <div class="radial-bg"></div>
+
+        <div class="scroll-top-wrapper">
+            <div class="scroll-top hide-block"></div>
+        </div>
+
+
+        <!-- BEGIN TRIGGER MENU BTN -->
+        <div class="trigger-mobile-menu-btn">
+            <div class="wrapper">
+                <span></span>
+            </div>
+            <div class="wrapper">
+                <span></span>
+            </div>
+            <div class="wrapper">
+                <span></span>
+            </div>
+        </div>
+        <!-- END TRIGGER MENU BTN -->
+
+
+        <!-- BEGIN MOBILE TOP LINE -->
+        <div class="mobile-top-line">
+            <div class="logo-wrapper">
+                <img src="images/fun-park_logo-h.svg" alt="logo">
+            </div>
+        </div>
+        <!-- END MOBILE TOP LINE -->
 
         <!-- BEGIN LEFT SIDEBAR -->
         <div class="left-sidebar">
@@ -99,35 +152,7 @@
                 <span class="hint">прокрути вниз</span>
             </div>
         </div>
-
-        <div class="scroll-top-wrapper">
-            <div class="scroll-top hide-block"></div>
-        </div>
         <!-- END NAV -->
-
-
-        <!-- BEGIN TRIGGER MENU BTN -->
-        <div class="trigger-mobile-menu-btn">
-            <div class="wrapper">
-                <span></span>
-            </div>
-            <div class="wrapper">
-                <span></span>
-            </div>
-            <div class="wrapper">
-                <span></span>
-            </div>
-        </div>
-        <!-- END TRIGGER MENU BTN -->
-
-
-        <!-- BEGIN MOBILE TOP LINE -->
-        <div class="mobile-top-line">
-            <div class="logo-wrapper">
-                <img src="images/fun-park_logo-h.svg" alt="logo">
-            </div>
-        </div>
-        <!-- END MOBILE TOP LINE -->
 
 
         <!-- BEGIN MOBILE NAV -->
@@ -146,8 +171,8 @@
                     </div>
                     <div class="working-info__item">
                         <img class="icon" src="images/clock.svg">
-                        <p><span>Пн - Пт:</span>12:00 - 18:00</p>
-                        <p><span>Сб - Нд:</span>10:00 - 18:00</p>
+                        <p><span>Пн - Пт:</span>12:00 - 6:00</p>
+                        <p><span>Сб - Нд:</span>10:00 - 6:00</p>
                     </div>
                 </div>
                 <ul id="sections-nav" class="sections-nav">
@@ -250,7 +275,7 @@
                                     <div class="ticket__header"></div>
                                     <img class="ticket__image" src="images/info/logo-ticket.svg">
                                     <div class="ticket__days">Пн - Пт</div>
-                                    <div class="ticket__price">230 ₴</div>
+                                    <div class="ticket__price">240 ₴</div>
                                     <div class="ticket__footer"></div>
                                 </div>
                                 <div class="ticket ticket-2 cover"  style="background-image: url('images/info/tickets-bg.svg'); ">
@@ -263,10 +288,8 @@
                             </div>
                             <div class="description">
                                 <p class="bonus-item child">Дітям до 3-х років безкоштовно*</p>
-                                <p class="bonus-item birthday">Безкоштовний вхід імениннику**</p>
                                 <p>Fun Park – це 3 поверхи ігрового простору та враження нового масштабу! Безлімітні розваги до 6 ранку.</p>
                                 <p class="clarification">*за наявності свідоцтва про народження.</p>
-                                <p class="clarification">**за наявності документа з датою народження.</p>
                             </div>
                         </div>
                         <div class="right">
@@ -284,7 +307,7 @@
                                 </div>
                                 <div class="form-row">
                                     <label><span>Телефон</span>
-                                        <input class="phone invalid" type="text" name="entry.1166974658" placeholder="0XXXXXXXXX">
+                                        <input class="phone invalid" type="text" name="entry.1166974658" value="380" placeholder="380XXXXXXXXX">
                                     </label>
                                 </div>
                                 <div class="form-row">
@@ -640,8 +663,9 @@
                             <h2>Улюблена кухня зі всього світу</h2>
                             <p>Надзвичайно апетитне Fun-меню на всі випадки життя: легкий перекус чи справжній бенкет з друзями –  смакуватиме кожному. Обирайте!</p>
                             <div class="restaurant-menu-wrapper">
-                                <a href="https://drive.google.com/file/d/1e8aaYzPayFSVbDqEUd64MYfR5aPvpUYy/view" class="restaurant-menu" target="_blank">Меню ресторану</a>
-                                <a href="https://drive.google.com/file/d/1GsZPdbtfW_OfyNJrOUMX1RY84OxN9wwd/view" class="restaurant-menu" target="_blank">Меню фудкорту</a>
+                                <a href="https://drive.google.com/file/d/1vHFv7alUd24n1Ur1LUjtXKsUvO5nEPfl/view" class="restaurant-menu" target="_blank">Меню ресторану</a>
+                                <a href="https://drive.google.com/file/d/1ghnICS01XQ6JwRy--5DH5-_pIJ1zTW21/view" class="restaurant-menu" target="_blank">Меню фудкорту</a>
+                                <a href="https://drive.google.com/file/d/1LADQOJBgeeX9_bEXdpYKI2p-VfjxN9XJ/view" class="restaurant-menu" target="_blank">Барне меню</a>
                             </div>
                         </div>
                         <div class="right">
@@ -711,8 +735,8 @@
                             </div>
                             <div class="working-info__item">
                                 <img class="icon" src="images/clock.svg">
-                                <p><span>Пн - Пт:</span>12:00 - 18:00</p>
-                                <p><span>Сб - Нд:</span>10:00 - 18:00</p>
+                                <p><span>Пн - Пт:</span>12:00 - 6:00</p>
+                                <p><span>Сб - Нд:</span>10:00 - 6:00</p>
                             </div>
                         </div>
 

@@ -823,6 +823,9 @@ span {
 		width: 75px;
 		bottom: 50px;
 	}
+	@include mq($max-540) {
+		right: 0;
+	}
 }
 .scroll-top {
 	width: 40px;
