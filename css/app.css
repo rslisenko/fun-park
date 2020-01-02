@@ -2087,8 +2087,7 @@ span.hide-block {
         top: 5vw; } }
     @media all and (max-width: 767px) {
       .cinema-section .screen-size-text {
-        font-size: 16px;
-        opacity: 0.3; } }
+        font-size: 16px; } }
   @media all and (max-width: 1200px) {
     .cinema-section .header-text {
       max-width: 320px; } }
