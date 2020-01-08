@@ -27,8 +27,28 @@ function is_form_valid($form) {
 		}
 		is_valid = is_valid && is_filed_valid;
 	});
-
 	return is_valid;
+}
+
+function change_images($images) {
+	let i = 0;
+	console.log($images.length);
+	while(i < $images.length) {
+		setTimeout(function() {
+			console.log(i++);
+			i++;
+		}, 1000);
+	}
+	// for (var i = 0; i < $images_container.length; i++) {
+	// 	$(el).addClass('show');
+	// 	setTimeout(function() {
+	// 		$images_container[i].removeClass('show');
+	// 	}, 1000);
+	// }
+	// $images_container.find('.image-wrapper').each(function(index, el) {
+		// setTimeout(function(){
+		// }, 500)
+	// });
 }
 
 
@@ -44,6 +64,7 @@ $(document).ready(function () {
 	let $nav_wrapper = $('.nav-wrapper');
 	let $events_block = $('.events-block');
 
+	// change_images($('.images-container .image-wrapper'));
 
 	// SCROLL ON ANCOR CLICK
 	$('a[href*="#"]').on('click', function(event) {

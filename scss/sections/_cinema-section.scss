@@ -70,10 +70,20 @@
 				z-index: -1;
 			}
 		}
-
 		.screen-wrapper {
 			position: relative;
 			overflow: hidden;
+		}
+		.screen-arrow-desktop {
+			@include mq($max-768) {
+				display: none;
+			}
+		}
+		.screen-arrow-mobile {
+			display: none;
+			@include mq($max-767) {
+				display: block;
+			}
 		}
 		.bg-image {
 			position: absolute;
@@ -104,6 +114,7 @@
 		top: 5vw;
 		right: 13%;
 		font-size: 30px;
+		opacity: 0.3;
 		@include mq($max-1200) {
 			top: 4vw;
 			right: 10%;
@@ -116,7 +127,7 @@
 		}
 		@include mq($max-767) {
 			font-size: 16px;
-			opacity: 0.3;
+			opacity: 1;
 		}
 	}
 	.header-text {
