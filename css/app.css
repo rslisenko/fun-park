@@ -1138,6 +1138,11 @@ span.hide-block {
     .info-section .right label {
       font-size: 12px;
       color: #FFFFFF; }
+    .info-section .right a:hover {
+      color: #FFFFFF;
+      text-decoration: underline; }
+    .info-section .right a:focus {
+      color: #FFFFFF; }
     .info-section .right input[type="tel"],
     .info-section .right input[type="text"],
     .info-section .right input[type="email"] {
