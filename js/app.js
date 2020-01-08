@@ -27,9 +27,9 @@ function is_form_valid($form) {
 		}
 		is_valid = is_valid && is_filed_valid;
 	});
-
 	return is_valid;
 }
+
 
 
 $(document).ready(function () {
@@ -43,7 +43,35 @@ $(document).ready(function () {
 	let $red_block = $('.red-block');
 	let $nav_wrapper = $('.nav-wrapper');
 	let $events_block = $('.events-block');
+	let on_ticket = false;
 
+	function change_images($images, current) {
+		console.log('on_ticket: ', on_ticket);
+		if (on_ticket) {
+			let total = $images.length;
+			current == 0 ? current = total : current;
+			setTimeout(function() {
+				$images.removeClass('active');
+		  		current--;
+		  		$images.closest('.images-container').find('.image-wrapper').eq((total-current)%total).addClass('active');
+		  		change_images($images, current, on_ticket);
+			}, 1000);
+		} else {
+			current = 0;
+			return;
+		}
+	}
+
+	// $('.our-entertainments__item .inner').on('mouseenter',function(event) {
+	// 	console.log('mouseenter');
+	// 	on_ticket = true;
+	// 	change_images($('.images-container .image-wrapper'), $('.images-container .image-wrapper').length, on_ticket);
+	// });
+	// $('.our-entertainments__item .inner').on('mouseleave',function(event) {
+	// 	console.log('mouseleave');
+	// 	on_ticket = false;
+	// 	change_images($('.images-container .image-wrapper'), $('.images-container .image-wrapper').length, on_ticket);
+	// });
 
 	// SCROLL ON ANCOR CLICK
 	$('a[href*="#"]').on('click', function(event) {
