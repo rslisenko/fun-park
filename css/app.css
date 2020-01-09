@@ -1477,11 +1477,6 @@ span.hide-block {
         @media all and (max-width: 767px) {
           .party-section .party-block .list-item .inner {
             border-radius: 10px; } }
-      .party-section .party-block .list-item .image {
-        padding-bottom: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat; }
       .party-section .party-block .list-item .description {
         display: -webkit-box;
         display: -ms-flexbox;
