@@ -1389,6 +1389,9 @@ span.hide-block {
       @media all and (max-width: 375px) {
         .play-section .attractions .content p {
           font-size: 14px; } }
+    .play-section .attractions .content span {
+      display: block;
+      font-size: 12px; }
 
 .party-section {
   display: -webkit-box;
