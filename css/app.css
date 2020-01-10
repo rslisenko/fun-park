@@ -1138,6 +1138,11 @@ span.hide-block {
     .info-section .right label {
       font-size: 12px;
       color: #FFFFFF; }
+    .info-section .right a:hover {
+      color: #FFFFFF;
+      text-decoration: underline; }
+    .info-section .right a:focus {
+      color: #FFFFFF; }
     .info-section .right input[type="tel"],
     .info-section .right input[type="text"],
     .info-section .right input[type="email"] {
@@ -1384,6 +1389,9 @@ span.hide-block {
       @media all and (max-width: 375px) {
         .play-section .attractions .content p {
           font-size: 14px; } }
+    .play-section .attractions .content span {
+      display: block;
+      font-size: 12px; }
 
 .party-section {
   display: -webkit-box;
@@ -1472,11 +1480,6 @@ span.hide-block {
         @media all and (max-width: 767px) {
           .party-section .party-block .list-item .inner {
             border-radius: 10px; } }
-      .party-section .party-block .list-item .image {
-        padding-bottom: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat; }
       .party-section .party-block .list-item .description {
         display: -webkit-box;
         display: -ms-flexbox;
