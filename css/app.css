@@ -975,6 +975,8 @@ span.hide-block {
       @media all and (max-width: 1023px) {
         .our-entertainments .inner .image-wrapper {
           opacity: 1; } }
+      .our-entertainments .inner .image-wrapper.active {
+        z-index: 2; }
 
 .info-section {
   display: -webkit-box;

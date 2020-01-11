@@ -30,26 +30,16 @@ function is_form_valid($form) {
 	return is_valid;
 }
 
-function change_images($images) {
-	let i = 0;
-	console.log($images.length);
-	while(i < $images.length) {
-		setTimeout(function() {
-			console.log(i++);
-			i++;
-		}, 1000);
-	}
-	// for (var i = 0; i < $images_container.length; i++) {
-	// 	$(el).addClass('show');
-	// 	setTimeout(function() {
-	// 		$images_container[i].removeClass('show');
-	// 	}, 1000);
-	// }
-	// $images_container.find('.image-wrapper').each(function(index, el) {
-		// setTimeout(function(){
-		// }, 500)
-	// });
-}
+// function change_images($images) {
+// 	let i = 0;
+// 	console.log($images.length);
+// 	while(i < $images.length) {
+// 		setTimeout(function() {
+// 			console.log(i++);
+// 			i++;
+// 		}, 1000);
+// 	}
+// }
 
 
 
@@ -64,39 +54,44 @@ $(document).ready(function () {
 	let $red_block = $('.red-block');
 	let $nav_wrapper = $('.nav-wrapper');
 	let $events_block = $('.events-block');
-	let on_ticket = false;
+	let is_same_item = false;
+	let timer = 0;
 
-	function change_images($images, current) {
-		console.log('on_ticket: ', on_ticket);
-		if (on_ticket) {
-			let total = $images.length;
-			current == 0 ? current = total : current;
-			setTimeout(function() {
+	function change_images($target, current_image, flag) {
+		let $images = $target.closest('.inner').find('.image-wrapper');
+		let total_images = $images.length;
+		console.log('total_images: ', total_images);
+		console.log('current_image: ', current_image);
+		if (flag) {
+			timer = setTimeout(function() {
 				$images.removeClass('active');
-		  		current--;
-		  		$images.closest('.images-container').find('.image-wrapper').eq((total-current)%total).addClass('active');
-		  		change_images($images, current, on_ticket);
+		  		if (current_image > 0) {
+			  		--current_image;
+		  		} else {
+		  			current_image = total_images - 1;
+		  		}
+		  		$images.eq((total_images-current_image)%total_images).addClass('active');
+		  		change_images($target, current_image, flag);
 			}, 1000);
 		} else {
-			current = 0;
+			current_image = 0;
+			clearTimeout(timer);
 			return;
 		}
 	}
 
-<<<<<<< HEAD
-	// change_images($('.images-container .image-wrapper'));
-=======
-	// $('.our-entertainments__item .inner').on('mouseenter',function(event) {
-	// 	console.log('mouseenter');
-	// 	on_ticket = true;
-	// 	change_images($('.images-container .image-wrapper'), $('.images-container .image-wrapper').length, on_ticket);
-	// });
-	// $('.our-entertainments__item .inner').on('mouseleave',function(event) {
-	// 	console.log('mouseleave');
-	// 	on_ticket = false;
-	// 	change_images($('.images-container .image-wrapper'), $('.images-container .image-wrapper').length, on_ticket);
-	// });
->>>>>>> d8796b12113de382950bd944f301e900baa93842
+	let target = null;
+	$('.our-entertainments__item .inner').on('mouseenter', function(event) {
+		let current_target = event.target;
+		change_images($(current_target), $(current_target).closest('.inner').find('.image-wrapper').length, true);
+	});
+
+	$('.our-entertainments__item .inner').on('mouseleave', function(event) {
+		let current_target = event.target;
+		is_same_item = false;
+		change_images($(current_target), $(current_target).closest('.inner').find('.image-wrapper').length, false);
+	});
+
 
 	// SCROLL ON ANCOR CLICK
 	$('a[href*="#"]').on('click', function(event) {
