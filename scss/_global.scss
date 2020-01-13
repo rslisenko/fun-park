@@ -112,6 +112,13 @@ span {
 		cursor: pointer;
 	}
 }
+.page-header {
+	position: fixed;
+	top: 0;
+	opacity: 0;
+	z-index: -1;
+	visibility: hidden;
+}
 .header-block {
 	h2 {
 		text-transform: uppercase;
@@ -138,7 +145,15 @@ span {
 		}
 	}
 }
+.preloader-wrapper {
+	&.hide-preloader {
+		z-index: -1;
+		opacity: 0;
+	}
+	.preloader {
 
+	}
+}
 .sections {
 	padding-top: 5px;
 	padding-bottom: 50px;
@@ -807,6 +822,9 @@ span {
 			top: 7px;
 			right: calc(100% + 10px);
 			background-color: $white;
+		}
+		&:hover {
+			cursor: pointer;
 		}
 	}
 	.scroll-top-wrapper {

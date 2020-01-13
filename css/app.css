@@ -98,6 +98,13 @@ span.hide-block {
   .btn:hover {
     cursor: pointer; }
 
+.page-header {
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden; }
+
 .header-block h2 {
   text-transform: uppercase;
   margin-bottom: 7px; }
@@ -120,6 +127,10 @@ span.hide-block {
   @media all and (max-width: 1023px) {
     .header-block p {
       font-size: 14px; } }
+
+.preloader-wrapper.hide-preloader {
+  z-index: -1;
+  opacity: 0; }
 
 .sections {
   padding-top: 5px;
@@ -751,6 +762,8 @@ span.hide-block {
       top: 7px;
       right: calc(100% + 10px);
       background-color: #FFFFFF; }
+    .nav-wrapper .hint:hover {
+      cursor: pointer; }
 
 .scroll-top-wrapper {
   position: fixed;

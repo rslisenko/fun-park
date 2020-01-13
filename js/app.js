@@ -30,20 +30,11 @@ function is_form_valid($form) {
 	return is_valid;
 }
 
-// function change_images($images) {
-// 	let i = 0;
-// 	console.log($images.length);
-// 	while(i < $images.length) {
-// 		setTimeout(function() {
-// 			console.log(i++);
-// 			i++;
-// 		}, 1000);
-// 	}
-// }
-
 
 
 $(document).ready(function () {
+
+	$('.preloader-wrapper').addClass('hide-preloader');
 
 	// GLOBAL VARS
 	const vh = $(window).height();
@@ -60,8 +51,7 @@ $(document).ready(function () {
 	function change_images($target, current_image, flag) {
 		let $images = $target.closest('.inner').find('.image-wrapper');
 		let total_images = $images.length;
-		console.log('total_images: ', total_images);
-		console.log('current_image: ', current_image);
+
 		if (flag) {
 			timer = setTimeout(function() {
 				$images.removeClass('active');
@@ -72,7 +62,7 @@ $(document).ready(function () {
 		  		}
 		  		$images.eq((total_images-current_image)%total_images).addClass('active');
 		  		change_images($target, current_image, flag);
-			}, 1000);
+			}, 750);
 		} else {
 			current_image = 0;
 			clearTimeout(timer);
