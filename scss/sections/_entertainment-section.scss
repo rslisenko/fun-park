@@ -136,11 +136,23 @@
 			bottom: 0;
 			left: 0;
 			transition: 0.5s;
-			@include mq($max-1023) {
-				opacity: 1;
+			@include mq($max-1024) {
+				// opacity: 1;
+				display: none;
 			}
 			&.active {
 				z-index: 2;
+			}
+		}
+		.image-wrapper-mobile {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			@include mq($max-1024) {
+				display: block;
 			}
 		}
 	}
