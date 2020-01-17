@@ -586,6 +586,9 @@ span {
 	justify-content: center;
 	list-style-type: none;
 	margin-left: 0;
+	@include mq($max-768) {
+		display: none;
+	}
 	li {
 		margin-right: 8px;
 		margin-bottom: 5px;

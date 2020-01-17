@@ -546,6 +546,9 @@ span.hide-block {
   justify-content: center;
   list-style-type: none;
   margin-left: 0; }
+  @media all and (max-width: 768px) {
+    .socials {
+      display: none; } }
   .socials li {
     margin-right: 8px;
     margin-bottom: 5px;
