@@ -259,6 +259,31 @@ span.hide-block {
     z-index: 105;
     opacity: 1; }
 
+.doc-item {
+  position: relative;
+  padding-left: 40px;
+  line-height: 30px;
+  margin-bottom: 20px; }
+  .doc-item:hover, .doc-item:focus {
+    color: #FFFFFF;
+    text-decoration: underline; }
+    .doc-item:hover:before, .doc-item:focus:before {
+      width: 50px;
+      height: 50px;
+      left: -19px;
+      top: -4px;
+      background-image: url(../images/doc-item-hover.svg); }
+  .doc-item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 25px;
+    height: 30px;
+    background-image: url(../images/doc-item.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+
 .main-content {
   position: relative;
   display: -webkit-box;
@@ -1229,6 +1254,8 @@ span.hide-block {
       .info-section .right .confirmation-wrapper label {
         font-size: 14px;
         line-height: 1.4; }
+      .info-section .right .confirmation-wrapper a {
+        text-decoration: underline; }
     .info-section .right .styled-checkbox {
       position: absolute;
       left: 1px;
@@ -2230,5 +2257,10 @@ span.hide-block {
     width: 100%;
     -webkit-box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25);
     box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25); }
+  .contacts-section .bottom-info {
+    margin-top: 80px; }
+    .contacts-section .bottom-info a {
+      display: inline-block;
+      margin-right: 30px; }
 
 
