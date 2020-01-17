@@ -75,7 +75,7 @@
 			overflow: hidden;
 		}
 		.screen-arrow-desktop {
-			@include mq($max-768) {
+			@include mq($max-767) {
 				display: none;
 			}
 		}

@@ -62,7 +62,7 @@ $(document).ready(function () {
 		  		}
 		  		$images.eq((total_images-current_image)%total_images).addClass('active');
 		  		change_images($target, current_image, flag);
-			}, 750);
+			}, 250);
 		} else {
 			current_image = 0;
 			clearTimeout(timer);
