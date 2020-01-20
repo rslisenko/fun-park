@@ -466,7 +466,7 @@ span {
 		display: none;
 	}
 	@include mq($maxh-800) {
-		padding-top: 60px;
+		padding-top: 30px;
 	}
 	&__inner {
 		position: sticky;
@@ -576,6 +576,11 @@ span {
 			}
 		}
 	}
+	.socials {
+		@include mq($max-768) {
+			display: none;
+		}
+	}
 }
 .socials {
 	// width: 120px;
@@ -586,9 +591,6 @@ span {
 	justify-content: center;
 	list-style-type: none;
 	margin-left: 0;
-	@include mq($max-768) {
-		display: none;
-	}
 	li {
 		margin-right: 8px;
 		margin-bottom: 5px;

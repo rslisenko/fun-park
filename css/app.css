@@ -443,7 +443,7 @@ span.hide-block {
       display: none; } }
   @media all and (max-height: 800px) {
     .left-sidebar {
-      padding-top: 60px; } }
+      padding-top: 30px; } }
   .left-sidebar__inner {
     position: -webkit-sticky;
     position: sticky;
@@ -532,6 +532,9 @@ span.hide-block {
         .left-sidebar .working-info .image-wrapper .icon--hover {
           z-index: 0;
           opacity: 0; }
+  @media all and (max-width: 768px) {
+    .left-sidebar .socials {
+      display: none; } }
 
 .socials {
   width: 100%;
@@ -546,9 +549,6 @@ span.hide-block {
   justify-content: center;
   list-style-type: none;
   margin-left: 0; }
-  @media all and (max-width: 768px) {
-    .socials {
-      display: none; } }
   .socials li {
     margin-right: 8px;
     margin-bottom: 5px;
