@@ -452,7 +452,7 @@ span {
 	width: 15vw;
 	height: 100vh;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	padding: 90px 20px 30px;
 	@include mq($max-1024) {
 		width: 140px;
@@ -460,7 +460,7 @@ span {
 	}
 	@include mq($max-1023) {
 		width: 140px;
-		padding-top: 40px;
+		// padding-top: 40px;
 	}
 	@include mq($max-767) {
 		display: none;

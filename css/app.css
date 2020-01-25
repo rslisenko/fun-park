@@ -426,9 +426,9 @@ span.hide-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 90px 20px 30px; }
   @media all and (max-width: 1024px) {
     .left-sidebar {
@@ -436,8 +436,7 @@ span.hide-block {
       padding: 55px 10px 20px; } }
   @media all and (max-width: 1023px) {
     .left-sidebar {
-      width: 140px;
-      padding-top: 40px; } }
+      width: 140px; } }
   @media all and (max-width: 767px) {
     .left-sidebar {
       display: none; } }
@@ -2275,5 +2274,8 @@ span.hide-block {
     .contacts-section .bottom-info a {
       display: inline-block;
       margin-right: 30px; }
+      @media all and (max-width: 768px) {
+        .contacts-section .bottom-info a {
+          display: block; } }
 
 
