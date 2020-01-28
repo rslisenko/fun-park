@@ -20,11 +20,9 @@
 		a {
 			display: inline-block;
 			margin-right: 30px;
+			width: 210px;
 			@include mq($max-768) {
 				display: block;
-			}
-			&:before {
-
 			}
 		}
 	}
