@@ -280,8 +280,8 @@
 				padding: 20px 20px;
 				font-family: $main_font;
 				color: $white;
-				opacity: 0;
-				visibility: hidden;
+				// opacity: 0;
+				// visibility: hidden;
 				transition: 0.3s;
 				span {
 					display: inline-block;
@@ -289,6 +289,9 @@
 					font-size: 14px;
 					font-weight: 500;
 					margin-bottom: 15px;
+				}
+				.default-message {
+					text-align: center;
 				}
 				.time-wrapper {
 					width: 100%;

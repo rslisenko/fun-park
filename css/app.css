@@ -1714,8 +1714,6 @@ span.hide-block {
         padding: 20px 20px;
         font-family: "Montserrat", sans-serif;
         color: #FFFFFF;
-        opacity: 0;
-        visibility: hidden;
         -webkit-transition: 0.3s;
         -o-transition: 0.3s;
         transition: 0.3s; }
@@ -1725,6 +1723,8 @@ span.hide-block {
           font-size: 14px;
           font-weight: 500;
           margin-bottom: 15px; }
+        .party-section .events-block .list-item .inner-content .default-message {
+          text-align: center; }
         .party-section .events-block .list-item .inner-content .time-wrapper {
           width: 100%; }
           .party-section .events-block .list-item .inner-content .time-wrapper .time {
