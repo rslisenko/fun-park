@@ -1711,12 +1711,17 @@ span.hide-block {
         justify-content: center;
         -ms-flex-line-pack: distribute;
         align-content: space-around;
-        padding: 20px 20px;
+        padding: 40px 20px;
         font-family: "Montserrat", sans-serif;
         color: #FFFFFF;
+        opacity: 0;
+        visibility: hidden;
         -webkit-transition: 0.3s;
         -o-transition: 0.3s;
         transition: 0.3s; }
+        @media all and (max-width: 1023px) {
+          .party-section .events-block .list-item .inner-content {
+            padding: 30px 15px; } }
         .party-section .events-block .list-item .inner-content span {
           display: inline-block;
           min-width: 90px;
@@ -1726,12 +1731,20 @@ span.hide-block {
         .party-section .events-block .list-item .inner-content .default-message {
           text-align: center; }
         .party-section .events-block .list-item .inner-content .time-wrapper {
-          width: 100%; }
+          width: 100%;
+          margin-top: 50px; }
+          @media all and (max-width: 1023px) {
+            .party-section .events-block .list-item .inner-content .time-wrapper {
+              margin-top: 0; } }
           .party-section .events-block .list-item .inner-content .time-wrapper .time {
             font-size: 20px;
             font-weight: 800; }
         .party-section .events-block .list-item .inner-content .price-wrapper {
-          width: 100%; }
+          width: 100%;
+          margin-bottom: 50px; }
+          @media all and (max-width: 1023px) {
+            .party-section .events-block .list-item .inner-content .price-wrapper {
+              margin-bottom: 0; } }
           .party-section .events-block .list-item .inner-content .price-wrapper .price {
             font-size: 20px;
             font-weight: 800; }

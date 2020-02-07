@@ -277,12 +277,15 @@
 				flex-wrap: wrap;
 				justify-content: center;
 				align-content: space-around;
-				padding: 20px 20px;
+				padding: 40px 20px;
 				font-family: $main_font;
 				color: $white;
-				// opacity: 0;
-				// visibility: hidden;
+				opacity: 0;
+				visibility: hidden;
 				transition: 0.3s;
+				@include mq($max-1023) {
+					padding: 30px 15px;
+				}
 				span {
 					display: inline-block;
 					min-width: 90px;
@@ -295,6 +298,10 @@
 				}
 				.time-wrapper {
 					width: 100%;
+					margin-top: 50px;
+					@include mq($max-1023) {
+						margin-top: 0;
+					}
 					.time {
 						font-size: 20px;
 						font-weight: 800;
@@ -302,6 +309,10 @@
 				}
 				.price-wrapper {
 					width: 100%;
+					margin-bottom: 50px;
+					@include mq($max-1023) {
+						margin-bottom: 0;
+					}
 					.price {
 						font-size: 20px;
 						font-weight: 800;
