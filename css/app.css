@@ -2286,6 +2286,14 @@ span.hide-block {
     -webkit-box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25);
     box-shadow: -30px 30px 34px rgba(0, 0, 0, 0.25); }
   .contacts-section .bottom-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-top: 80px; }
     .contacts-section .bottom-info a {
       display: inline-block;
