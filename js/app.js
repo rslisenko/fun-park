@@ -48,6 +48,11 @@ $(document).ready(function () {
 	let is_same_item = false;
 	let timer = 0;
 
+
+	if ($(window).width() > 1279) {
+		new SimpleBar(document.getElementById('events-block__list'));
+	}
+
 	function change_images($target, current_image, flag) {
 		let $images = $target.closest('.inner').find('.image-wrapper');
 		let total_images = $images.length;
@@ -313,6 +318,13 @@ $(document).ready(function () {
 		}
 
 		scroll_old_pos = offset_top;
+	});
+
+	//
+	$(document).on('scroll', function(event) {
+		if ($(window).width() > 1279) {
+			new SimpleBar(document.getElementById('events-block__list'));
+		}
 	});
 
 });
