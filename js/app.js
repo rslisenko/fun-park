@@ -49,9 +49,9 @@ $(document).ready(function () {
 	let timer = 0;
 
 
-	if ($(window).width() > 1279) {
-		new SimpleBar(document.getElementById('events-block__list'));
-	}
+	// if ($(window).width() > 1279) {
+	// 	new SimpleBar(document.getElementById('events-block__list'));
+	// }
 
 	function change_images($target, current_image, flag) {
 		let $images = $target.closest('.inner').find('.image-wrapper');
@@ -93,7 +93,7 @@ $(document).ready(function () {
 		event.preventDefault();
 		let section_name = $(this).attr('href');
 		$('html, body').animate({
-			scrollTop: $(section_name).offset().top
+			scrollTop: $(section_name).offset().top - 1
 		}, 800);
 		setTimeout(function() {
 			$('.sections-nav li').removeClass('active');
