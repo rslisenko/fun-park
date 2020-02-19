@@ -141,7 +141,7 @@ $(document).ready(function () {
 	let section_start = 0;
 	let section_end = 0;
 
-	$('.sections .section').each(function(index, el) {
+	$('.content .section').each(function(index, el) {
 		let section = {};
 		section.start = $(el).offset().top;
 		section.end = section.start + $(el).outerHeight();
@@ -323,7 +323,7 @@ $(document).ready(function () {
 	//
 	$(document).on('scroll', function(event) {
 		if ($(window).width() > 1279) {
-			new SimpleBar(document.getElementById('events-block__list'));
+			// new SimpleBar(document.getElementById('events-block__list'));
 		}
 	});
 
