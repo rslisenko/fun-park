@@ -537,12 +537,14 @@ span {
 		}
 		a, p {
 			max-width: 120px;
-			display: block;
+			// display: block;
 			margin-left: auto;
 			margin-right: auto;
 			color: inherit;
 		}
 		p {
+			display: flex;
+			justify-content: center;
 			max-width: 140px;
 			font-size: 12px;
 			font-family: $main_font;
@@ -550,6 +552,7 @@ span {
 			span {
 				display: block;
 				font-weight: 800;
+				padding-right: 5px;
 			}
 		}
 		img {
@@ -694,7 +697,7 @@ span {
 	}
 	.working-info {
 		width: 50%;
-		padding-right: 25px;
+		padding-right: 10px;
 		&__item {
 			text-align: center;
 			margin-bottom: 40px;
@@ -716,10 +719,13 @@ span {
 				}
 			}
 			p {
+				display: flex;
+				justify-content: center;
 				margin-bottom: 0px;
 				span {
 					font-weight: 800;
 					display: block;
+					padding-right: 5px;
 				}
 			}
 		}
