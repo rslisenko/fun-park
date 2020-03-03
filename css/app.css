@@ -523,7 +523,7 @@ span.hide-block {
     .left-sidebar .working-info .image-wrapper {
       display: inline-block;
       position: relative;
-      width: 30px;
+      width: 100%;
       height: 30px; }
       .left-sidebar .working-info .image-wrapper .icon {
         position: absolute;
