@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Open+Sans:400,600,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800|Open+Sans:400,500,600,800&display=swap");
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -1526,6 +1526,9 @@ span.hide-block {
       -ms-flex-align: start;
       align-items: flex-start;
       padding-top: 20px; }
+      @media all and (max-width: 1024px) {
+        .party-section .events-block__list {
+          padding-top: 0; } }
     .party-section .events-block .list-item {
       margin-bottom: 30px;
       font-weight: 500;
@@ -1550,7 +1553,7 @@ span.hide-block {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         overflow: hidden;
-        min-height: 55px; }
+        min-height: 65px; }
       .party-section .events-block .list-item__body {
         position: relative;
         border-bottom-left-radius: 20px;
@@ -1665,7 +1668,7 @@ span.hide-block {
             .party-section .events-block .list-item .btn-wrapper .btn--fb:after {
               background-image: url("../images/facebook-icon.svg"); }
       .party-section .events-block .list-item .date {
-        width: 100px;
+        width: 95px;
         padding: 12px 7px;
         color: #E40005;
         border-top-left-radius: 20px;
@@ -1697,8 +1700,8 @@ span.hide-block {
         flex-wrap: wrap;
         -ms-flex-line-pack: center;
         align-content: center;
-        width: calc(100% - 100px);
-        padding: 10px 15px;
+        width: calc(100% - 95px);
+        padding: 10px 10px;
         color: #1B1C20;
         font-family: "Montserrat", sans-serif;
         border-top-left-radius: 20px;
@@ -1706,7 +1709,7 @@ span.hide-block {
         background-color: #FFFFFF; }
         .party-section .events-block .list-item .info .open-text {
           width: 100%;
-          font-weight: 600; }
+          font-weight: 500; }
         .party-section .events-block .list-item .info span {
           display: block;
           font-size: 20px;

@@ -65,8 +65,8 @@
 			flex-wrap: wrap;
 			align-items: flex-start;
 			padding-top: 20px;
-			@include mq($max-1279) {
-				// position: static;
+			@include mq($max-1024) {
+				padding-top: 0;
 			}
 		}
 		.list-item {
@@ -97,7 +97,7 @@
 				border-top-left-radius: 20px;
 				border-top-right-radius: 20px;
 				overflow: hidden;
-				min-height: 55px;
+				min-height: 65px;
 			}
 			&__body {
 				position: relative;
@@ -220,7 +220,7 @@
 				}
 			}
 			.date {
-				width: 100px;
+				width: 95px;
 				padding: 12px 7px;
 				color: $red;
 				border-top-left-radius: 20px;
@@ -251,8 +251,8 @@
 				display: flex;
 				flex-wrap: wrap;
 				align-content: center;
-				width: calc(100% - 100px);
-				padding: 10px 15px;
+				width: calc(100% - 95px);
+				padding: 10px 10px;
 				color: $black;
 				font-family: $main_font;
 				border-top-left-radius: 20px;
@@ -260,7 +260,7 @@
 				background-color: $white;
 				.open-text {
 					width: 100%;
-					font-weight: 600;
+					font-weight: 500;
 				}
 				span {
 					display: block;
