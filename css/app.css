@@ -1543,6 +1543,8 @@ span.hide-block {
           width: 100%;
           margin-bottom: 10px; } }
       .party-section .events-block .list-item__inner {
+        overflow: hidden;
+        border-radius: 20px;
         overflow: hidden; }
       .party-section .events-block .list-item__header {
         display: -webkit-box;
@@ -1798,8 +1800,7 @@ span.hide-block {
           top: 0;
           left: 0;
           width: 100%;
-          height: 100%;
-          background-color: #FFFFFF; }
+          height: 100%; }
         @media all and (max-width: 767px) {
           .party-section .party-block .list-item .inner {
             border-radius: 10px; } }
@@ -1848,7 +1849,7 @@ span.hide-block {
           @media all and (max-width: 1023px) {
             .party-section .party-block .list-item .description h3 {
               font-size: 18px; } }
-          @media all and (max-width: 767px) {
+          @media all and (max-width: 768px) {
             .party-section .party-block .list-item .description h3 {
               font-size: 16px; } }
           @media all and (max-width: 540px) {
